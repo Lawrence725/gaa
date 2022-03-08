@@ -2030,7 +2030,7 @@
                                 <div class="box">
                                     <div class="item">
                                         <span class="title">優惠</span>
-                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                        <a class="add" onclick="popDiscount()"><i class="fas fa-plus fa-xs"></i></a>
                                     </div>
                                     <table>
                                         <tr>
@@ -2039,9 +2039,9 @@
                                             <th><span class="content">時間</span></th>
                                             <th><span class="content">取餐方式</span></th>
                                             <th><span class="content">門檻</span></th>
+                                            <th><span class="content">優惠方式</span></th>
                                             <th><span class="content">人數</span></th>
                                             <th><span class="content">會員</span></th>
-                                            <th><span class="content">優惠方式</span></th>
                                             <th></th>
                                         </tr>
                                         <tr>
@@ -2058,19 +2058,19 @@
                                                 <span class="content">2021/09/23 - 2021/09/30</span>
                                             </td>
                                             <td align="center">
-                                                <span class="content">全部</span>
+                                                <span class="content">內用<br>自取<br>外送</span>
                                             </td>
                                             <td align="center">
-                                                <span class="content">不限</span>
+                                                <span class="content">不限<br>滿$500<br>滿$1000</span>
                                             </td>
                                             <td align="center">
-                                                <span class="content">不限</span>
+                                                <span class="content">折價10元<br>8折<br>折價$100</span>
                                             </td>
                                             <td align="center">
-                                                <span class="content">不限</span>
+                                                <span class="content">2人<br>不限<br>不限</span>
                                             </td>
                                             <td align="center">
-                                                <span class="content">折價10元</span>
+                                                <span class="content">不限<br>新戶<br>新戶</span>
                                             </td>
                                             <td align="center">
                                                 <div class="action">
@@ -2093,19 +2093,19 @@
                                                 <span class="content">2021/09/23 - 2021/09/30</span>
                                             </td>
                                             <td align="center">
-                                                <span class="content">自取</span>
+                                                <span class="content">全部</span>
                                             </td>
                                             <td align="center">
                                                 <span class="content">數量滿5個</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">折價*1個</span>
                                             </td>
                                             <td align="center">
                                                 <span class="content">1人</span>
                                             </td>
                                             <td align="center">
                                                 <span class="content">新戶</span>
-                                            </td>
-                                            <td align="center">
-                                                <span class="content">折價*1個</span>
                                             </td>
                                             <td align="center">
                                                 <div class="action">
@@ -2227,6 +2227,79 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 電子發票 -->
+                    <div id="mainInvoice">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title" onclick="popInvoice()">電子發票</span>
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <a class="textButton" onclick="popInvoiceDisable()"><span>解除服務</span></a>
+                                    <table class="content fit empty">
+                                        <tr>
+                                            <td><span class="silver">裝態</span></td>
+                                            <td><input class="input fake" type="text" placeholder="" value="使用中"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="silver">特店名稱</span></td>
+                                            <td><input class="input fake" type="text" placeholder="" value="點點全球股份有限公司"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="silver">發票抬頭</span></td>
+                                            <td><input class="input" type="text" placeholder="" value="快點吃早餐"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="silver">統一編號</span></td>
+                                            <td><input class="input fake" type="text" placeholder="" value="快點吃早餐"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="silver">本期剩餘票號組數</span></td>
+                                            <td><input class="input fake" type="text" placeholder="" value="103組"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title">自動取號</span>
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">當少於</span>
+                                        <div class="number">
+                                            <input type="number" value="100" min="0">
+                                            <span class="content unit">組</span>
+                                        </div>
+                                        <span class="content">自動取號</span>
+                                        <div class="number">
+                                            <input type="number" value="100" min="0">
+                                            <span class="content unit">組</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">立即取號</span>
+                                    <div class="number">
+                                        <input type="number" value="100" min="0">
+                                        <span class="content unit">組</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- 紀錄 -->
                     <div id="mainRecord">
                         <div class="areaH">
@@ -2303,6 +2376,350 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup (Discount)-->
+            <section id="popDiscount" class="popDiscount popup">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">新增優惠</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="flexH width">
+                            <div class="flexV margin padding width">
+                                <span class="title">優惠名稱</span>
+                                <input class="input" type="text" placeholder="名稱">
+                                <br>
+                            </div>
+                            <div class="flexV margin padding width">
+                                <span class="title">優惠時間</span>
+                                <div class="dateRange">
+                                    <input type="date">
+                                    <span class="content">-</span>
+                                    <input type="date">
+                                </div>
+                                <span class="remark center">為開始日期的00:00開始，至結束日期的00:00截止</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popMain full">
+                            <div class="grid">
+                                <div class="grid1 flexH width">
+                                    <a class="flexH width middle active">
+                                        <label class="check">
+                                            <input type="checkbox" name="checkbox2"> <!-- checked="checked" -->
+                                            <span class="checkmark checkbox"></span>
+                                        </label>
+                                        <span class="content">全部</span>
+                                    </a>
+                                    <a class="flexH width middle">
+                                        <label class="check">
+                                            <input type="checkbox" name="checkbox2" checked> <!-- checked="checked" -->
+                                            <span class="checkmark checkbox"></span>
+                                        </label>
+                                        <span class="content">內用</span>
+                                    </a>
+                                    <a class="flexH width middle">
+                                        <label class="check">
+                                            <input type="checkbox" name="checkbox2"> <!-- checked="checked" -->
+                                            <span class="checkmark checkbox"></span>
+                                        </label>
+                                        <span class="content">自取</span>
+                                    </a>
+                                    <a class="flexH width middle">
+                                        <label class="check">
+                                            <input type="checkbox" name="checkbox2" checked> <!-- checked="checked" -->
+                                            <span class="checkmark checkbox"></span>
+                                        </label>
+                                        <span class="content">外送</span>
+                                    </a>
+                                </div>
+                                <div class="grid2">
+                                    <span class="title">優惠門檻</span>
+                                    <table class="content fit empty">
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio"></span>
+                                                    <div class="text">金額滿</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="30" min="0">
+                                                    <span class="content unit">元</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio"></span>
+                                                    <div class="text">數量滿</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">個</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio"></span>
+                                                    <div class="text">數量每滿</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">個</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="remark">可累計</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio1" checked> <!-- checked="checked" -->
+                                                    <span class="checkmark radio"></span>
+                                                    <div class="text">不限</div>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="grid3">
+                                    <span class="title">會員門檻</span>
+                                    <label class="check">
+                                        <input type="radio" name="radio3" checked> <!-- checked="checked" -->
+                                        <span class="checkmark radio"></span>
+                                        <div class="text">新戶 (首次下單)</div>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="radio3" checked> <!-- checked="checked" -->
+                                        <span class="checkmark radio"></span>
+                                        <div class="text">舊戶 (已下過單)</div>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="radio3" checked> <!-- checked="checked" -->
+                                        <span class="checkmark radio"></span>
+                                        <div class="text">不限</div>
+                                    </label>
+                                </div>
+                                <div class="grid4">
+                                    <span class="title">使用人數</span>
+                                    <div class="flexH">
+                                        <label class="check">
+                                            <input type="radio" name="radio2"> <!-- checked="checked" -->
+                                            <span class="checkmark radio"></span>
+                                        </label>
+                                        <div class="number">
+                                            <input type="number" value="3" min="0">
+                                            <span class="content unit">人</span>
+                                        </div>
+                                    </div>
+                                    <label class="check">
+                                        <input type="radio" name="radio2" checked> <!-- checked="checked" -->
+                                        <span class="checkmark radio"></span>
+                                        <div class="text">不限</div>
+                                    </label>
+                                </div>
+                                <div class="grid5">
+                                    <span class="title">優惠方式</span>
+                                    <table class="content fit empty">
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio4" checked> <!-- checked="checked" -->
+                                                    <span class="checkmark radio"></span>
+                                                    <div class="text">折價</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">元</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio4"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio"></span>
+                                                    <div class="text">折扣</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">%</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <select name="type">
+                                                        <option value="無條件捨去">無條件捨去</option>
+                                                        <option value="四捨五入">四捨五入</option>
+                                                    </select>
+                                                    <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="remark">例如：$50折10%<br>$50九折，即$45</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio4"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio" style="top: 14px;"></span>
+                                                    <div class="text">折價<br>商品最低價</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">個</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2">
+                                                <span class="remark">例如：買5送1，買5杯$50 + 1杯$40<br>即折$40</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio4"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio" style="top: 14px;"></span>
+                                                    <div class="text">折價<br>商品均價</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">個</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2">
+                                                <span class="remark">例如：買5送1，買5杯$50 + 1杯$40<br>(250+40)/6 = 48.33，即折$48</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="check">
+                                                    <input type="radio" name="radio4"> <!-- checked="checked" -->
+                                                    <span class="checkmark radio" style="top: 14px;"></span>
+                                                    <div class="text">折價<br>商品均價後，折5的倍數低價</div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3" min="0">
+                                                    <span class="content unit">個</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2">
+                                                <span class="remark">例如：買5送1，買5杯$50 + 1杯$40<br>(250+40)/6 = 48.33，即折$45</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit"><span class="remark">新增</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Invoice) -->
+            <section id="popInvoice" class="popInvoice popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">電子發票申請</span>
+                    </section>
+                    <section class="popMain">
+                        <table class="content empty">
+                            <tr>
+                                <td><span>特店名稱</span></td>
+                                <td><input class="input" type="text" placeholder="" value="Shop Name"></td>
+                            </tr>
+                            <tr>
+                                <td><span>特店發票抬頭<br></span>
+                                    <span class="remark silver">建議最多8個中文字將印於紙本發票上方</span></td>
+                                <td><input class="input" type="text" placeholder="" value="SN"></td>
+                            </tr>
+                            <tr>
+                                <td><span>特店地址</span></td>
+                                <td><input class="input" type="text" placeholder="" value="台北市"></td>
+                            </tr>
+                            <tr>
+                                <td><span>特店ID<br></span>
+                                    <span class="remark silver">6碼，需與頭家網所申請一致</span></td>
+                                <td><input class="input" type="text" placeholder="" value="123456"></td>
+                            </tr>
+                            <tr>
+                                <td><span>裝置ID<br></span>
+                                    <span class="remark silver">需與頭家網所申請一致</span></td>
+                                <td><input class="input" type="text" placeholder="" value="123456"></td>
+                            </tr>
+                            <tr>
+                                <td><span>EDC ID<br></span>
+                                    <span class="remark silver">需與頭家網所申請一致</span></td>
+                                <td><input class="input" type="text" placeholder="" value="123456"></td>
+                            </tr>
+                            <tr>
+                                <td><span>統一編號<br></span>
+                                    <span class="remark silver">8碼數字，需與頭家網所申請一致</span></td>
+                                <td><input class="input" type="text" placeholder="" value="12345678"></td>
+                            </tr>
+                            <tr>
+                                <td><span>使用者名稱<br></span>
+                                    <span class="remark silver">登入頭家網後台之使用者名稱</span></td>
+                                <td><input class="input" type="text" placeholder="" value="shopname"></td>
+                            </tr>
+                            <tr>
+                                <td><span>出單機序號</span></td>
+                                <td><input class="input" type="text" placeholder="" value="12345678"></td>
+                            </tr>
+                            <tr>
+                                <td><span>出單機Device ID</span></td>
+                                <td><input class="input" type="text" placeholder="" value="12345678"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit"><span class="remark">送出申請</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (InvoiceDisable) -->
+            <section id="popInvoiceDisable" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">解除服務</span>
+                    </section>
+                    <section class="popMain">
+                        <span class="content">確定解除服務？</span>
+                        <span class="content">解除後將需要重新申請</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit delete"><span class="remark">確定解除</span></a>
+                    </section>
+                </div>
+            </section>
         </div>
         <!-- Script -->
         <!-- Chart.js -->
