@@ -1,3 +1,15 @@
+// Popup (Delete)
+function popDelete() {
+    var popDelete   = document.getElementById("popDelete");
+    var close       = popDelete.getElementsByClassName("close")[0];
+    var submit      = popDelete.getElementsByClassName("submit")[0];
+    var cancel      = popDelete.getElementsByClassName("cancel")[0];
+    close.onclick   = function() { popDelete.style.display = "none"; }
+    submit.onclick  = function() { popDelete.style.display = "none"; }
+    cancel.onclick  = function() { popDelete.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popDelete) { popDelete.style.display = "none"; }}
+    popDelete.style.display = "flex"; }
+    
 // Popup (Discount)
 function popDiscount() {
     var popDiscount = document.getElementById("popDiscount");

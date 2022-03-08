@@ -82,7 +82,7 @@ body { margin: 0; background-color: #EBECF1; }
         &.margin                { margin: 5px;
             &.width             { width: calc(100% - 10px); }}
         &.padding.margin.width  { width: calc(100% - 20px); }}
-    .grid { width: calc(100% - 30px); padding: 10px; display: grid; grid-template-columns: 50% 50%; grid-template-rows: auto; column-gap: 10px; row-gap: 10px; grid-template-areas: 
+    .grid { width: calc(100% - 10px); display: grid; grid-template-columns: 50% 50%; grid-template-rows: auto; column-gap: 10px; row-gap: 10px; grid-template-areas: 
         "type type"
         "rule member"
         "rule number"
@@ -303,7 +303,7 @@ body { margin: 0; background-color: #EBECF1; }
         &.notice .popBody { width: 300px; height: fit-content; }
         &.popInvoice .popBody { width: 500px; }
         &.popDiscount .popBody { width: 700px;
-            .popMain.full { margin-top: -10px; }
+            .popMain.full { margin-top: -10px; border: 10px solid white; }
             .number { width: 90px; }
             .dropdown { width: 120px; }
             .flexV { background-color: white;

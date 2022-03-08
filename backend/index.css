@@ -220,8 +220,7 @@ body {
   width: calc(100% - 20px);
 }
 #bodyOverview .grid {
-  width: calc(100% - 30px);
-  padding: 10px;
+  width: calc(100% - 10px);
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
@@ -1074,6 +1073,7 @@ body {
 }
 #bodyOverview .popup.popDiscount .popBody .popMain.full {
   margin-top: -10px;
+  border: 10px solid white;
 }
 #bodyOverview .popup.popDiscount .popBody .number {
   width: 90px;

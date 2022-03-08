@@ -2075,7 +2075,7 @@
                                             <td align="center">
                                                 <div class="action">
                                                     <a><i class="fas fa-pen"></i></a>
-                                                    <a><i class="fas fa-trash"></i></a>
+                                                    <a onclick="popDelete()"><i class="fas fa-trash"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -2110,7 +2110,7 @@
                                             <td align="center">
                                                 <div class="action">
                                                     <a><i class="fas fa-pen"></i></a>
-                                                    <a><i class="fas fa-trash"></i></a>
+                                                    <a onclick="popDelete()"><i class="fas fa-trash"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -2376,6 +2376,22 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup (Delete) -->
+            <section id="popDelete" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">確定刪除？</span>
+                    </section>
+                    <section class="popMain">
+                        <span class="content">刪除後將無法復原</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit delete"><span class="remark">刪除</span></a>
+                    </section>
+                </div>
+            </section>
             <!-- Popup (Discount)-->
             <section id="popDiscount" class="popDiscount popup">
                 <div class="popBody">
