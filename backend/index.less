@@ -31,7 +31,7 @@ body { margin: 0; background-color: #EBECF1; }
     // Common
     a { text-decoration: none !important; }
     a:hover { cursor: pointer; box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }
-    input { border: 0; padding: 0; font-family: 'Montserrat'; color: @c-g1; }
+    input { border: 0; padding: 0; font-family: 'Montserrat'; color: black; }
     input:focus { box-shadow: none !important; outline: none; }
     textarea { border: 0; }
     textarea:focus { box-shadow: none !important; outline: none; }
@@ -65,7 +65,7 @@ body { margin: 0; background-color: #EBECF1; }
                     .areaH .areaV { color: white; }
                     .error { color: white; }
                 }
-                .tabTitle { display: flex; align-items: center; font-size: 18px; color: @c-g1;
+                .tabTitle { display: flex; align-items: center; font-size: 18px; color: black;
                     .icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
                     .error { margin-left: auto; color: @c-red; }
                 }
@@ -81,7 +81,7 @@ body { margin: 0; background-color: #EBECF1; }
         #main { width: 100%;
             .areaH { width: 100%; display: flex;
                 .areaV { width: 100%; margin-left: 20px; display: flex; flex-direction: column; }
-                .box { height: 100%; max-width: 100%; padding: 5px 10px; margin-bottom: 20px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-around; background-color: white; color: @c-g1;
+                .box { height: 100%; max-width: 100%; padding: 5px 10px; margin-bottom: 20px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-around; background-color: white; color: black;
                     &.inputS {
                         .item { justify-content: space-between; }
                         span { min-width: 160px; }
@@ -134,7 +134,7 @@ body { margin: 0; background-color: #EBECF1; }
     }
     .input { width: 100%; height: 20px; padding: 5px 10px; margin: 5px 0; border-radius: 99px; font-size: 14px; background-color: @c-bg; }
     .number { width: 100%; height: 30px; padding-left: 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
-        input { width: 100%; height: 100%; border-radius: 99px; font-size: 14px; text-align: left; color: @c-g1; background-color: transparent; }
+        input { width: 100%; height: 100%; border-radius: 99px; font-size: 14px; text-align: left; color: black; background-color: transparent; }
         .unit { min-width: 45%; margin: 0; line-height: 30px; text-align: left; }
     }
     textarea { width: calc(100% - 20px); height: calc(100% - 30px); padding: 10px; margin: 5px 0; border-radius: 10px; font-size: 14px; background-color: @c-bg; }
@@ -145,7 +145,7 @@ body { margin: 0; background-color: #EBECF1; }
     }
     .map { width: 100%; height: 150px; margin: 5px 0; border-radius: 10px; background-color: @c-bg; }
     .dropdown { width: 100px; margin: 5px 0; position: relative; display: flex; align-items: center;
-        select { width: 100%; height: 20px; padding: 5px 10px; margin: 0; border-radius: 99px; font-size: 14px; color: @c-g1; background-color: @c-bg; }
+        select { width: 100%; height: 20px; padding: 5px 10px; margin: 0; border-radius: 99px; font-size: 14px; color: black; background-color: @c-bg; }
         .arrow { width: 20px; height: 100%; top: 0; right: 5px; position: absolute; display: flex; align-items: center; justify-content: center; color: @c-1; pointer-events: none; }
     }
     .date { width: fit-content; padding: 0 10px; margin: 5px 0; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c-bg;
@@ -156,11 +156,11 @@ body { margin: 0; background-color: #EBECF1; }
     .el-range-input { background-color: transparent; }
     .el-row:after, .el-row:before { content: unset; }
     .timeRange { width: fit-content; height: 30px; padding: 0 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: @c-bg;
-        select { font-size: 14px; color: @c-g1; background-color: @c-bg; }
+        select { font-size: 14px; color: black; background-color: @c-bg; }
         .delete { margin-left: 10px; color: @c-g4; }
     }
     .dateRange { width: fit-content; height: 30px; padding: 0 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: @c-bg;
-        input { font-size: 14px; color: @c-g1; background-color: @c-bg; }
+        input { font-size: 14px; color: black; background-color: @c-bg; }
     }
     .search { width: 250px; padding: 0 3px; border-radius: 15px 7.5px 7.5px 15px; top: 5px; right: 5px; position: absolute; display: flex; align-items: center; background-color: @c-bg;
         .dropdown { min-width: 80px; height: 20px;
@@ -241,13 +241,13 @@ body { margin: 0; background-color: #EBECF1; }
     .modal { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: flex; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: auto; z-index: 3; background-color: rgba(0,0,0,0.5);
         // Common
         .close { top: 20px; right: 20px; position: absolute; color: @c-g4; z-index: 3; font-size: 28px; line-height: 16px;
-            &:hover, &:focus { color: @c-g1; text-decoration: none; cursor: pointer; }
+            &:hover, &:focus { color: black; text-decoration: none; cursor: pointer; }
         }
         .item { display: flex; align-items: center; }
         #main { width: 100%; margin: 20px 0;
             .areaH { width: calc(100% + 10px); margin: 0 -5px; display: flex;
                 .areaV { width: 100%; margin: 0 5px; display: flex; flex-direction: column; }
-                .box { height: 100%; max-width: 100%; padding: 5px 10px; margin-bottom: 10px; border-radius: 5px; display: flex; flex-direction: column; justify-content: space-around; background-color: white; color: @c-g1;
+                .box { height: 100%; max-width: 100%; padding: 5px 10px; margin-bottom: 10px; border-radius: 5px; display: flex; flex-direction: column; justify-content: space-around; background-color: white; color: black;
                     input, .tabs, .number, .number > input { background-color: @c-bg;}
                 }
                 .gray { color: @c-g4; filter: grayscale(100%) }
