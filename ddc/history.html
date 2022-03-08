@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>筷金</title>
+        <link rel="icon" type="image/png" href="img/favicon.png"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body history">
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <a href="history.html" class="itemH">
+                    <div class="img">
+                        <img src="img/point.svg">
+                    </div>
+                    <span class="fM primary">1000</span>
+                </a>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <div class="itemH width between">
+                    <span class="fL">歷史紀錄</span>
+                    <div class="itemH">
+                        <!-- Date Range -->
+                        <div class="dateRange">
+                            <input type="date" class="fS" name="startDate">
+                            <span class="fM">-</span>
+                            <input type="date" class="fS" name="endDate">
+                        </div>
+                        <!-- Search -->
+                        <div class="search">
+                            <div class="dropdown">
+                                <select name="type">
+                                    <option value="全部">全部</option>
+                                    <option value="#">#</option>
+                                    <option value="時間">時間</option>
+                                    <option value="項目">項目</option>
+                                    <option value="點數變動">點數變動</option>
+                                    <option value="變動後餘額">變動後餘額</option>
+                                    <option value="交易狀態">交易狀態</option>
+                                </select>
+                                <div class="arrow"><i class="fas fa-caret-down fa-xs gray"></i></div>
+                            </div>
+                            <div class="icon"><i class="fas fa-search fa-xs"></i></div>
+                            <input type="text" placeholder="搜尋" class="fS">
+                            <!-- <a class="icon"><i class="fas fa-times fa-xs"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th><span class="fM">#</span></th>
+                        <th><span class="fM">時間</span></th>
+                        <th><span class="fM">項目</span></th>
+                        <th><span class="fM">點數變動</span></th>
+                        <th><span class="fM">變動後餘額</span></th>
+                        <th><span class="fM">交易狀態</span></th>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span class="fM">1</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">2021/09/23 13:10</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">點數加值</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM green">+100</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">1000</span>
+                        </td>
+                        <td align="center">
+                            <div class="itemH">
+                                <div class="icon">
+                                    <i class="fas fa-clock orange"></i>
+                                </div>
+                                <span class="fM orange">處理中</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span class="fM">2</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">2021/09/23 13:10</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">點數加值</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM green">+100</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">1000</span>
+                        </td>
+                        <td align="center">
+                            <div class="itemH">
+                                <div class="icon">
+                                    <i class="fas fa-check green"></i>
+                                </div>
+                                <span class="fM green">已加值</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span class="fM">3</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">2021/09/23 13:10</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">點數加值</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM error">-100</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">1000</span>
+                        </td>
+                        <td align="center">
+                            <div class="itemH">
+                                <div class="icon">
+                                    <i class="fas fa-check green"></i>
+                                </div>
+                                <span class="fM green">已使用</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span class="fM">4</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">2021/09/23 13:10</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">點數加值</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM error">-100</span>
+                        </td>
+                        <td align="center">
+                            <span class="fM">1000</span>
+                        </td>
+                        <td align="center">
+                            <div class="itemH">
+                                <div class="icon">
+                                    <i class="fas fa-times error"></i>
+                                </div>
+                                <span class="fM error">已取消</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="index.js"></script>
+    </body>
+</html>

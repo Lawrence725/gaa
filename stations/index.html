@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>分站出單</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="bodyOverview">
+            <!-- Search -->
+            <div id="search">
+                <div class="icon"><i class="fas fa-search"></i></div>
+                <input type="text" placeholder="搜尋商店名稱/ID">
+                <a class="icon"><i class="fas fa-times"></i></a>
+            </div>
+
+            <!-- Main -->
+            <div id="container">
+                <!-- 出單機 -->
+                <div>
+                    <div class="areaH">
+                        <div class="areaV">
+                            <div class="box"> 
+                                <div class="item">
+                                    <span class="title">分站出單</span>
+                                    <label class="switch" style="margin-left: 10px;">
+                                        <input type="checkbox" checked> <!-- checked -->
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 出單機 -->
+                <div id="mainHardware">
+                    <div class="areaH">
+                        <div class="areaV">
+                            <div class="box editBox"> <!-- class="editBox" **********編輯模式切換********** -->
+                                <div class="item">
+                                    <span class="title">出單機</span>
+                                    <a class="add"><i class="fas fa-pen fa-xs"></i></a>
+                                    <a class="save"><i class="fas fa-save"></i></a>
+                                </div>
+                                <div class="item wrap" style="align-items: unset;">
+                                    <div class="hardware">
+                                        <span class="title">快一點餐廳出單機A</span>
+                                        <div class="item wrap">
+                                            <span class="content" style="margin-right: 5px;">工作站</span>
+                                            <div class="station">
+                                                <span class="content">預設</span>
+                                            </div>
+                                            <div class="station">
+                                                <span class="content">煎台</span>
+                                            </div>
+                                            <div class="station">
+                                                <span class="content">飲料</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hardware">
+                                        <span class="title">快一點餐廳出單機A</span>
+                                        <div class="item wrap">
+                                            <span class="content" style="margin-right: 5px;">工作站</span>
+                                            <div class="station">
+                                                <span class="content">預設</span>
+                                            </div>
+                                            <div class="station off">
+                                                <span class="content">煎台</span>
+                                            </div>
+                                            <div class="station">
+                                                <span class="content">飲料</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hardware">
+                                        <span class="title">快一點餐廳出單機A</span>
+                                        <div class="item ">
+                                            <span class="content" style="margin-right: 5px;">工作站</span>
+                                            <div class="station">
+                                                <span class="content">預設</span>
+                                            </div>
+                                            <div class="station">
+                                                <span class="content">煎台</span>
+                                            </div>
+                                            <div class="station off">
+                                                <span class="content">飲料</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hardware">
+                                        <span class="title">快一點餐廳出單機A</span>
+                                        <div class="item wrap">
+                                            <span class="content" style="margin-right: 5px;">工作站</span>
+                                            <div class="station">
+                                                <span class="content">預設</span>
+                                            </div>
+                                            <div class="station">
+                                                <span class="content">煎台</span>
+                                            </div>
+                                            <div class="station">
+                                                <span class="content">飲料</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 工作站 -->
+                <div id="mainStation">
+                    <div class="areaH">
+                        <div class="areaV">
+                            <div class="box">
+                                <div class="item">
+                                    <span class="title">工作站</span>
+                                    <a class="add popStation"><i class="fas fa-plus fa-xs"></i></a>
+                                    <span class="remark">新增工作站後至上方綁定出單機</span>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th style="min-width: 30px;"><span class="content">工作站名稱</span></th>
+                                        <th><span class="content">列印品項</span></th>
+                                        <th><span class="content">取餐方式</span></th>
+                                        <th><span class="content">出單樣板</span></th>
+                                        <th><span class="content">列印次數</span></th>
+                                        <th><span class="content">列印金額</span></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <span class="content mainColor">預設</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">總單</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">內用</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">樣板A</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">x1</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">是</span>
+                                        </td>
+                                        <td align="center">
+                                            <div class="action">
+                                                <a class="popStation"><i class="fas fa-pen"></i></a>
+                                                <a class="popDelete"><i class="fas fa-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <span class="content mainColor">煎台</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">蛋餅, 其他</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">內用, 自取, 外送</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">樣板B</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">x2</span>
+                                        </td>
+                                        <td align="center">
+                                            <span class="content">否</span>
+                                        </td>
+                                        <td align="center">
+                                            <div class="action">
+                                                <a class="popStation"><i class="fas fa-pen"></i></a>
+                                                <a class="popDelete"><i class="fas fa-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popup - 新增/編輯工作站 -->
+            <div id="popStation" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <span class="title">新增工作站</span>
+                    <div class="item">
+                        <span class="content" style="min-width: 72px;">工作站名稱</span>
+                        <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                    </div>
+                    <div class="item">
+                        <span class="content" style="min-width: 72px;">列印次數</span>
+                        <div class="number" style="margin-left: 10px;">
+                            <input type="number" value="15" min="0">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="content" style="min-width: 72px;">取餐方式</span>
+                        <div style="width: 100%; display: flex; justify-content: space-between;">
+                            <label class="check" style="margin-left: 10px;">
+                                <input type="checkbox" name="checkbox1" checked> <!-- checked="checked" -->
+                                <span class="checkmark checkbox"></span>
+                                <div class="text">內用</div>
+                            </label>
+                            <label class="check" style="margin-left: 10px;">
+                                <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                <span class="checkmark checkbox"></span>
+                                <div class="text">自取</div>
+                            </label>
+                            <label class="check" style="margin-left: 10px;">
+                                <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                <span class="checkmark checkbox"></span>
+                                <div class="text">外送</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="content">是否列印金額</span>
+                        <div style="width: 100%; height: 40px; display: flex; align-items: center; justify-content: space-between;">
+                            <label class="switch" style="margin-left: 10px;">
+                                <input type="checkbox"> <!-- checked -->
+                                <span class="slider round"></span>
+                            </label>
+                            <a class="question"><i class="fas fa-question-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="content">是否列印總單</span>
+                        <div style="width: 100%; height: 40px; display: flex; align-items: center; justify-content: space-between;">
+                            <label class="switch" style="margin-left: 10px;">
+                                <input type="checkbox" checked> <!-- checked -->
+                                <span class="slider round"></span>
+                            </label>
+                            <a class="question"><i class="fas fa-question-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="item"> <!-- class="gray" -->
+                        <span class="content" style="min-width: 72px;">列印品項</span>
+                        <div style="width: 100%; min-height: 40px; margin-left: 10px; display: flex; align-items: center; justify-content: space-between;">
+                            <span class="content" style="white-space: normal;">蛋餅, 其他</span>
+                            <a class="edit popPrint"><i class="fas fa-pen"></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="content" style="min-width: 72px;">出單樣板</span>
+                        <div style="width: 100%; height: 40px; margin-left: 10px; display: flex; align-items: center; justify-content: space-between;">
+                            <span class="content">樣板A</span>
+                            <a class="edit popReceipt"><i class="fas fa-pen"></i></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="button cancel">取消</a>
+                        <a class="button submit">新增</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Popup - 列印品項 -->
+            <div id="popPrint" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <span class="title">列印品項</span>
+                    <div class="areaH">
+                        <div class="areaV type">
+                            <span class="title">商品屬性</span>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox1" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">蛋餅</div>
+                                </div>
+                                <a class="icon"><i class="fas fa-chevron-right"></i></a>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox1"> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">飲料</div>
+                                </div>
+                                <a class="icon"><i class="fas fa-chevron-right"></i></a>
+                            </label>
+                            <label class="check active">
+                                <input type="checkbox" name="checkbox1" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">其他</div>
+                                </div>
+                                <a class="icon"><i class="fas fa-chevron-right"></i></a>
+                            </label>
+                        </div>
+                        <div class="areaV product active"> <!-- class="active" -->
+                            <span class="title">商品</span>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">奶茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2"> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">綠茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">紅茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">奶茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2"> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">綠茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">紅茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">奶茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2"> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">綠茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="checkbox2" checked> <!-- checked-->
+                                <span class="checkmark checkbox"></span>
+                                <div class="areaV">
+                                    <div class="text">紅茶</div>
+                                    <div class="remark">P1 奶茶, 中奶</div>
+                                    <div class="remark">P2 奶茶</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="button cancel" style="width: 100%;">取消</a>
+                        <a class="button submit" style="width: 100%;">確定</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Popup - 出單樣板 -->
+            <div id="popReceipt" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <span class="title">出單樣板</span>
+                    <div class="areaH">
+                        <label class="check receipt">
+                            <input type="radio" name="radio1" checked> <!-- checked="checked" -->
+                            <span class="checkmark radio"></span>
+                            <div class="item">
+                                <span class="content">預設模板</span>
+                            </div>
+                            <img src="./img/Receipt1.png">
+                        </label>
+                        <label class="check receipt">
+                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                            <span class="checkmark radio"></span>
+                            <div class="item">
+                                <span class="content">主商品變小</span>
+                            </div>
+                            <img src="./img/Receipt2.png">
+                        </label>
+                        <label class="check receipt">
+                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                            <span class="checkmark radio"></span>
+                            <div class="item">
+                                <span class="content">主商品變小<br>加購選項變大</span>
+                            </div>
+                            <img src="./img/Receipt3.png">
+                        </label>
+                        <label class="check receipt">
+                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                            <span class="checkmark radio"></span>
+                            <div class="item">
+                                <span class="content">加購選項變大</span>
+                            </div>
+                            <img src="./img/Receipt4.png">
+                        </label>
+                    </div>
+                    <div class="item">
+                        <a class="button cancel" style="width: 100%;">取消</a>
+                        <a class="button submit" style="width: 100%;">確定</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popup - 通知 -->
+            <div id="popNotice" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <span class="title">刪除工作站？</span>
+                    <span class="content" style="text-align: center;">刪除前請注意是否已連接工作站</span>
+                    <div class="item">
+                        <a class="button cancel" style="width: 100%;">取消</a>
+                        <a class="button submit" style="width: 100%;">確定刪除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Script -->
+        <script src="index.js"></script>
+    </body>
+</html>

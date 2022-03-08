@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>商店概覽</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="bodyOverview">
+            <!-- QR Pay Popup -->
+            <div id="popQRpay" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <span class="title">新增商家</span>
+                    <div id="main">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="item">
+                                    <span class="content" style="min-width: 48px;">商家ID</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item">
+                                    <span class="content">商家名稱</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item">
+                                    <span class="content" style="min-width: 48px;">Email</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item">
+                                    <span class="content">聯絡電話</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item">
+                                    <span class="content">通訊地址</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <label class="check" style="margin-top: 10px;">
+                                    <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                    <span class="checkmark checkbox"></span>
+                                    <div class="text">同時新增預設支付設定組合？</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="button cancel">取消</a>
+                        <a class="button submit">新增</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

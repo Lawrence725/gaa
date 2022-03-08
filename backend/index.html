@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>商店概覽</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="bodyOverview">
+            <!-- Search -->
+            <div id="search">
+                <div class="icon"><i class="fas fa-search"></i></div>
+                <input type="text" placeholder="搜尋商店名稱/ID">
+                <a class="icon"><i class="fas fa-times"></i></a>
+            </div>
+            <div id="container">
+                <!-- Menu -->
+                <div id="tabs">
+                    <!-- Tab -->
+                    <a class="tab active">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-store"></i></div>
+                            <span>商店</span>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <span>系統狀態</span>
+                                <span>取餐方式</span>
+                                <span>支付方式</span>
+                                <span>公告</span>
+                            </div>
+                            <div class="areaV">
+                                <span>營業資訊</span>
+                                <span>申請人資料</span>
+                                <span>商店資料</span>
+                                <span>系統資料</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-sliders-h"></i></div>
+                            <span>進階設定</span>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="far fa-calendar-alt"></i></div>
+                            <span>時間</span>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <span>供餐時段</span>
+                                <span>備餐時間</span>
+                                <span>可預訂天數</span>
+                                <span>時間選項間隔</span>
+                            </div>
+                            <div class="areaV">
+                                <span>限流設定</span>
+                                <span>營業時間</span>
+                                <span>公休日</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-truck"></i></div>
+                            <span>物流</span>
+                            <div class="icon error"><i class="fas fa-exclamation-triangle"></i></div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <span>外送版本</span>
+                            </div>
+                            <div class="areaV">
+                                <span>運送條件</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-receipt"></i></div>
+                            <span>出單機</span>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <span>客製化樣板</span>
+                            </div>
+                            <div class="areaV">
+                                <span>標籤機設定</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-coins"></i></div>
+                            <span>金流</span>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <span>LINE Pay</span>
+                            </div>
+                            <div class="areaV">
+                                <span>Apple Pay</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-file-contract"></i></div>
+                            <span>合約</span>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-tags"></i></div>
+                            <span>優惠</span>
+                        </div>
+                    </a>
+                    <!-- Tab -->
+                    <a class="tab">
+                        <div class="tabTitle">
+                            <div class="icon"><i class="fas fa-link"></i></div>
+                            <span>串接</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Main -->
+                <div id="main">
+                    <!-- 商店 -->
+                    <div id="mainStore">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="title">系統狀態</span>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="title gray">線上支付</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">系統狀態</span>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">內用</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">自取</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">外送</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">支付方式</span>
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">內用</span>
+                                            <div class="item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="content gray">現金</span>
+                                            </div>
+                                            <div class="item">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="content">線上</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">自取</span>
+                                            <div class="item">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="content">現金</span>
+                                            </div>
+                                            <div class="item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="content gray">線上</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">外送</span>
+                                            <div class="item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="content gray">現金</span>
+                                            </div>
+                                            <div class="item">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span class="content">線上</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="areaH">
+                            <div class="areaV">
+                                <div class="box inputS">
+                                    <span class="title">商店參數</span>
+                                    <div class="item">
+                                        <span class="content">商店綁定碼</span>
+                                        <span class="content">snym7</span>
+                                        <span class="content">(綁定碼到期時間: 2022-01-23 02:29:20)</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">Menu</span>
+                                        <a class="add"><i class="fas fa-copy fa-xs"></i></a>
+                                        <span class="content double">https://line.me/R/app/1654284301-YLAK1ve5?accountId=1&type=undefined&source=qc&token=ca389 051d8f76d013741636bdd38ca634aa4cbab73831d071208d0504f44ace9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">公告</span>
+                                    <div class="textarea">
+                                        <a class="save"><i class="fas fa-save"></i></a>
+                                        <textarea placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="box inputL">
+                                    <span class="title">商店資料</span>
+                                    <div class="item">
+                                        <span class="content">統編</span>
+                                        <input class="input" type="text" placeholder="Invioce">
+                                        <a class="save"><i class="fas fa-save"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">名稱</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">信箱</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">電話</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">代碼</span>
+                                        <input class="input" type="text" placeholder="Custom Code">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">地址</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">營業資訊</span>
+                                    <div class="textarea">
+                                        <a class="save"><i class="fas fa-save"></i></a>
+                                        <textarea placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="box inputL">
+                                    <span class="title">申請人資料</span>
+                                    <div class="item">
+                                        <span class="content">信箱</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">電話</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="box inputS">
+                                    <span class="title">系統資料</span>
+                                    <div class="item">
+                                        <span class="content">Wifiotg 商店ID</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">WEB SSO ID</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">LINE加入好友連結</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">LINE加入好友ID</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">LINE加入QRCode連結</span>
+                                        <input class="input" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 進階 -->
+                    <div id="mainAdvanced">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">商品卡路里</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">再點一次</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">揪團</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">取消訂單自動加回庫存</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">手動接單</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">啟用LINE點餐</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">顯示點餐頁寄杯</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">顯示統一編號欄位</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">提供收據</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box inputM">
+                                    <div class="item">
+                                        <span class="content">菜單樣式</span>
+                                        <div class="tabs" style="margin-left: 10px;">
+                                            <a class="tab active">
+                                                <div class="icon"><i class="fas fa-list-ul fa-xs"></i></div>
+                                                <span>單欄</span>
+                                            </a>
+                                            <a class="tab">
+                                                <div class="icon"><i class="fas fa-columns fa-xs"></i></div>
+                                                <span>雙欄</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span class="content">自訂訂單流水號</span>
+                                            <span class="remark" style="margin-top: -5px;">輸入數字</span>
+                                        </div>
+                                        <div class="number" style="margin-left: 10px;">
+                                            <input type="number" value="1" min="0">
+                                            <!-- <span class="content unit">分鐘</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span class="content">取餐緩衝時間</span>
+                                            <span class="remark" style="margin-top: -5px;">設定0則不顯示</span>
+                                        </div>
+                                        <div class="number" style="margin-left: 10px;">
+                                            <input type="number" value="5" min="0">
+                                            <span class="content unit">分鐘</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span class="content">上架商品重置時間</span>
+                                            <span class="remark" style="margin-top: -5px;">hh:mm</span>
+                                        </div>
+                                        <div class="number" style="margin-left: 10px;">
+                                            <input type="number" value="1" min="0">
+                                            <!-- <span class="content unit">分鐘</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">取消訂單自動加回庫存</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">手動接單</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content gray">啟用LINE點餐</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">顯示點餐頁寄杯</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">顯示統一編號欄位</span>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="content">提供收據</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 時間 -->
+                    <div id="mainTime">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box" style="justify-content: start;">
+                                    <div class="item">
+                                        <span class="title">供餐時段</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="timeRange">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="timeRange">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">備餐時間</span>
+                                    <div class="item">
+                                        <span class="content">外送</span>
+                                        <div class="number" style="width: 100px; margin-left: 10px;">
+                                            <input type="number" value="5" min="0">
+                                            <span class="content unit">分鐘</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">自取</span>
+                                        <div class="number" style="width: 100px; margin-left: 10px;">
+                                            <input type="number" value="5" min="0">
+                                            <span class="content unit">分鐘</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">內用</span>
+                                        <div class="number" style="width: 100px; margin-left: 10px;">
+                                            <input type="number" value="5" min="0">
+                                            <span class="content unit">分鐘</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">可預訂天數</span>
+                                    <div class="item">
+                                        <div class="number" style="width: 100px;">
+                                            <input type="number" value="0" min="0">
+                                            <span class="content unit">天</span>
+                                        </div>
+                                        <div style="margin-left: 10px; display: flex; flex-direction: column;">
+                                            <span class="remark">０：只有立即選項</span>
+                                            <span class="remark">１：只開放當天點餐</span>
+                                            <span class="remark">２：則可預訂隔天...以此類推</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">時間選項間隔</span>
+                                    <div class="number" style="width: 100px;">
+                                        <input type="number" value="5" min="0">
+                                        <span class="content unit">分鐘</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title">限流設定</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th><span class="content">取餐方式</span></th>
+                                            <th><span class="content">營業時間</span></th>
+                                            <th><span class="content">限流時段</span></th>
+                                            <th><span class="content">間隔時段</span></th>
+                                            <th><span class="content">每時段訂單上限</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr class="edit">
+                                            <td align="center">
+                                                <div class="dropdown">
+                                                    <select name="type">
+                                                        <option value="外送">外送</option>
+                                                        <option value="自取">自取</option>
+                                                        <option value="內用">內用</option>
+                                                    </select>
+                                                    <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="week edit">
+                                                    <a class="content">日</a>
+                                                    <a class="content off">一</a>
+                                                    <a class="content off">二</a>
+                                                    <a class="content">三</a>
+                                                    <a class="content off">四</a>
+                                                    <a class="content">五</a>
+                                                    <a class="content">六</a>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="timeRange">
+                                                    <select name="time">
+                                                        <option value="00:00">00:00</option>
+                                                        <option value="00:30">00:30</option>
+                                                        <option value="01:00">01:00</option>
+                                                        <option value="01:30">01:30</option>
+                                                    </select>
+                                                    <span class="content">-</span>
+                                                    <select name="time">
+                                                        <option value="00:00">00:00</option>
+                                                        <option value="00:30">00:30</option>
+                                                        <option value="01:00">01:00</option>
+                                                        <option value="01:30">01:30</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="number" style="width: 100px;">
+                                                    <input type="number" value="15" min="0">
+                                                    <span class="content unit">分鐘</span>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="number" style="width: 100px;">
+                                                    <input type="number" value="2" min="0">
+                                                    <span class="content unit">訂單</span>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-save"></i></a>
+                                                    <a><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <span class="content">自取</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content off">一</div>
+                                                    <div class="content off">二</div>
+                                                    <div class="content">三</div>
+                                                    <div class="content off">四</div>
+                                                    <div class="content">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">01:30 - 02:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">15分鐘</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">3訂單</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <span class="content">自取</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content off">一</div>
+                                                    <div class="content off">二</div>
+                                                    <div class="content">三</div>
+                                                    <div class="content off">四</div>
+                                                    <div class="content">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">01:30 - 02:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">15分鐘</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">3訂單</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box start">
+                                    <div class="item">
+                                        <span class="title">營業時間</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th><span class="content">營業星期</span></th>
+                                            <th><span class="content">營業時間</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr class="edit">
+                                            <td align="center">
+                                                <div class="week edit">
+                                                    <a class="content off">日</a>
+                                                    <a class="content">一</a>
+                                                    <a class="content">二</a>
+                                                    <a class="content">三</a>
+                                                    <a class="content">四</a>
+                                                    <a class="content">五</a>
+                                                    <a class="content off">六</a>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="timeRange">
+                                                    <select name="time">
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="17:30">17:30</option>
+                                                    </select>
+                                                    <span class="content">-</span>
+                                                    <select name="time">
+                                                        <option value="19:00">19:00</option>
+                                                        <option value="19:30">19:30</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-save"></i></a>
+                                                    <a><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content">一</div>
+                                                    <div class="content">二</div>
+                                                    <div class="content">三</div>
+                                                    <div class="content">四</div>
+                                                    <div class="content">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">06:00 - 14:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content off">一</div>
+                                                    <div class="content off">二</div>
+                                                    <div class="content off">三</div>
+                                                    <div class="content off">四</div>
+                                                    <div class="content off">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">17:00 - 21:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="box start">
+                                    <div class="item">
+                                        <span class="title">外送取餐時間</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="tabs">
+                                        <a class="tab">
+                                            <span>同營業時間</span>
+                                        </a>
+                                        <a class="tab active">
+                                            <span>自訂時間</span>
+                                        </a>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th><span class="content">營業星期</span></th>
+                                            <th><span class="content">外送取餐時間</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <!-- <tr class="edit">
+                                            <td align="center">
+                                                <div class="week edit">
+                                                    <a class="content">日</a>
+                                                    <a class="content off">一</a>
+                                                    <a class="content off">二</a>
+                                                    <a class="content">三</a>
+                                                    <a class="content off">四</a>
+                                                    <a class="content">五</a>
+                                                    <a class="content">六</a>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="timeRange">
+                                                    <select name="time">
+                                                        <option value="00:00">00:00</option>
+                                                        <option value="00:30">00:30</option>
+                                                        <option value="01:00">01:00</option>
+                                                        <option value="01:30">01:30</option>
+                                                    </select>
+                                                    <span class="content">-</span>
+                                                    <select name="time">
+                                                        <option value="00:00">00:00</option>
+                                                        <option value="00:30">00:30</option>
+                                                        <option value="01:00">01:00</option>
+                                                        <option value="01:30">01:30</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-save"></i></a>
+                                                    <a><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr> -->
+                                        <tr>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content">一</div>
+                                                    <div class="content">二</div>
+                                                    <div class="content">三</div>
+                                                    <div class="content">四</div>
+                                                    <div class="content">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">11:00 - 14:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content off">一</div>
+                                                    <div class="content off">二</div>
+                                                    <div class="content off">三</div>
+                                                    <div class="content off">四</div>
+                                                    <div class="content off">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">17:00 - 20:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="box start">
+                                    <div class="item">
+                                        <span class="title">自取取餐時間</span>
+                                        <!-- <a class="add"><i class="fas fa-plus fa-xs"></i></a> -->
+                                    </div>
+                                    <div class="tabs">
+                                        <a class="tab active">
+                                            <span>同營業時間</span>
+                                        </a>
+                                        <a class="tab">
+                                            <span>自訂時間</span>
+                                        </a>
+                                    </div>
+                                    <!-- <table>
+                                        <tr>
+                                            <th><span class="content">營業星期</span></th>
+                                            <th><span class="content">外送取餐時間</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr class="edit">
+                                            <td align="center">
+                                                <div class="week edit">
+                                                    <a class="content">日</a>
+                                                    <a class="content off">一</a>
+                                                    <a class="content off">二</a>
+                                                    <a class="content">三</a>
+                                                    <a class="content off">四</a>
+                                                    <a class="content">五</a>
+                                                    <a class="content">六</a>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="timeRange">
+                                                    <select name="time">
+                                                        <option value="00:00">00:00</option>
+                                                        <option value="00:30">00:30</option>
+                                                        <option value="01:00">01:00</option>
+                                                        <option value="01:30">01:30</option>
+                                                    </select>
+                                                    <span class="content">-</span>
+                                                    <select name="time">
+                                                        <option value="00:00">00:00</option>
+                                                        <option value="00:30">00:30</option>
+                                                        <option value="01:00">01:00</option>
+                                                        <option value="01:30">01:30</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-save"></i></a>
+                                                    <a><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content off">一</div>
+                                                    <div class="content off">二</div>
+                                                    <div class="content">三</div>
+                                                    <div class="content off">四</div>
+                                                    <div class="content">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">01:30 - 02:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="week">
+                                                    <div class="content">日</div>
+                                                    <div class="content off">一</div>
+                                                    <div class="content off">二</div>
+                                                    <div class="content">三</div>
+                                                    <div class="content off">四</div>
+                                                    <div class="content">五</div>
+                                                    <div class="content">六</div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">01:30 - 02:00</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table> -->
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box" style="justify-content: start;">
+                                    <span class="title">營業時間</span>
+                                    <canvas id="timeChart" class="timeChart"></canvas>
+                                    <div class="tableLabel item">
+                                        <div class="color"></div>
+                                        <span class="content">營業時間</span>
+                                        <div class="color color2"></div> <!-- class: color2 -->
+                                        <span class="content">外送取餐時間</span>
+                                        <div class="color"></div> <!-- class: color3 -->
+                                        <span class="content">自取取餐時間</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">營業時間</span>
+                                    <span class="remark" style="margin-top: -5px;">設定每週營業時間，若消費者預約取餐時間遇到公休日，介面上將顯示「公休」不允許送單。</span>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">星期日</span>
+                                            <span class="remark" style="margin-top: -5px;">營業</span>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">星期一</span>
+                                            <span class="remark" style="margin-top: -5px;">營業</span>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content gray">星期二</span>
+                                            <span class="remark gray" style="margin-top: -5px;">公休</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">星期三</span>
+                                            <span class="remark" style="margin-top: -5px;">營業</span>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">星期四</span>
+                                            <span class="remark" style="margin-top: -5px;">營業</span>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">星期五</span>
+                                            <span class="remark" style="margin-top: -5px;">營業</span>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <span class="content">星期六</span>
+                                            <span class="remark" style="margin-top: -5px;">營業</span>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="timeRange" style="margin-left: 10px;">
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <span class="content">-</span>
+                                            <select name="time">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                            </select>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">公休日</span>
+                                    <div style="margin-bottom: 10px;">
+                                        <div style="display: flex; align-items: center;">
+                                            <span class="content">直接手動新增</span>
+                                            <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                        </div>
+                                        <span class="remark">點擊＋直接選擇日期，確認下方是否成功新增</span>
+                                    </div>
+                                    <div style="margin-bottom: 10px;">
+                                        <div style="display: flex; align-items: center;">
+                                            <span class="content">批次新增</span>
+                                            <a class="textButton"><span>批次匯入特定公休日</span></a>
+                                        </div>
+                                        <span class="remark">透過匯入特殊公休日（例如國定假日）即可進行設定，每次匯入會重新覆蓋上次設定。<br>
+                                            要刪除特殊公休日，可將公休日從excel移除後，再次匯入即可。</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="date" style="margin-right: 10px;">
+                                            <span class="content">07/14<br>星期日</span>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="date" style="margin-right: 10px;">
+                                            <span class="content">07/14<br>星期日</span>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                        <div class="date" style="margin-right: 10px;">
+                                            <span class="content">07/14<br>星期日</span>
+                                            <a class="delete"><i class="fas fa-trash fa-xs"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 物流 -->
+                    <div id="mainLogistics">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box inputM" style="justify-content: flex-start;">
+                                    <span class="title">物流設定</span>
+                                    <div class="item">
+                                        <span class="content">是否串接物流平台</span>
+                                        <div class="tabs" style="margin-left: 10px;">
+                                            <a class="tab active">
+                                                <span>串接物流平台</span>
+                                            </a>
+                                            <a class="tab">
+                                                <span>自送</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">拋單模式</span>
+                                        <div class="tabs" style="margin-left: 10px;">
+                                            <a class="tab active">
+                                                <span>自動</span>
+                                            </a>
+                                            <a class="tab">
+                                                <span>手動</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">運送時間</span>
+                                        <div class="tabs" style="margin-left: 10px;">
+                                            <a class="tab active">
+                                                <span>自訂</span>
+                                            </a>
+                                            <a class="tab">
+                                                <span>距離</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="areaV">
+                                <div class="box gray">
+                                    <span class="title">預設值</span>
+                                    <div class="item">
+                                        <span class="content" style="min-width: 72px;">運費設定</span>
+                                        <div class="tabs" style="width: 114px; margin-left: 10px;">
+                                            <a class="tab">
+                                                <span>物流</span>
+                                            </a>
+                                            <a class="tab active">
+                                                <span>自訂</span>
+                                            </a>
+                                        </div>
+                                        <div class="number" style="width: 120px; margin-left: 10px;">
+                                            <input type="number" value="10" min="0">
+                                            <span class="content unit">元</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">最低外送金額</span>
+                                        <div class="number" style="width: 120px; margin-left: 10px;">
+                                            <input type="number" value="10" min="0">
+                                            <span class="content unit">元</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">最低外送數量</span>
+                                        <div class="number" style="width: 120px; margin-left: 10px;">
+                                            <input type="number" value="5" min="0">
+                                            <span class="content unit">項商品</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">最長外送距離</span>
+                                        <div class="number" style="width: 120px; margin-left: 10px;">
+                                            <input type="number" value="3" min="0">
+                                            <span class="content unit">公里</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <span class="content">額外外送時間</span>
+                                        <div class="number" style="width: 120px; margin-left: 10px;">
+                                            <input type="number" value="5" min="0">
+                                            <span class="content unit">分鐘</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div style="display: flex; flex-direction: column;">
+                                            <div class="item">
+                                                <span class="content">免運門檻金額</span>
+                                                <div class="number" style="width: 120px; margin-left: 10px;">
+                                                    <input type="number" value="10" min="0">
+                                                    <span class="content unit">元</span>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <span class="content">免運門檻數量</span>
+                                                <div class="number" style="width: 120px; margin-left: 10px;">
+                                                    <input type="number" value="5" min="0">
+                                                    <span class="content unit">項商品</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="check" style="margin-left: 10px;">
+                                            <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                            <span class="checkmark checkbox"></span>
+                                            <div class="text">擇一</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box gray">
+                                    <span class="title">預設物流業者</span>
+                                    <div class="item">
+                                        <label class="check box4">
+                                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                            <span class="checkmark radio"></span>
+                                            <div class="logo">
+                                                <img src="./img/Lalamove.png">
+                                                <span>Lalamove</span>
+                                            </div>
+                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                        </label>
+                                        <label class="check box4">
+                                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                            <span class="checkmark radio"></span>
+                                            <div class="logo">
+                                                <img src="./img/GBG.png">
+                                                <span>全球</span>
+                                            </div>
+                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                        </label>
+                                        <label class="check box4">
+                                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                            <span class="checkmark radio"></span>
+                                            <div class="logo">
+                                                <img src="./img/PandaGo.png">
+                                                <span>PandaGO</span>
+                                            </div>
+                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                        </label>
+                                        <label class="check box4">
+                                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                            <span class="checkmark radio"></span>
+                                            <div class="logo">
+                                                <img src="./img/GIT.png">
+                                                <span>GIT</span>
+                                            </div>
+                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box" style="position: relative;">
+                                    <div class="item">
+                                        <span class="title">自訂運送條件</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <a class="textButton" style="top: 10px; right: 0; position: absolute;"><span>試算</span></a>
+                                    <div class="map"></div>
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th><span class="content">運費</span></th>
+                                            <th><span class="content">運送時間</span></th>
+                                            <th><span class="content">金額門檻</span></th>
+                                            <th><span class="content">數量門檻</span></th>
+                                            <th><span class="content">運送距離</span></th>
+                                            <th><span class="content">距離</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <label class="switch" style="margin-left: 10px;">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5元</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">30分鐘</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5元以上</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5個以上</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">地圖設定</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">地圖名稱</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                    <a><i class="fas fa-bars"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <label class="switch" style="margin-left: 10px;">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5元</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">30分鐘</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5元以上</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5個以上</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">地圖設定</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">地圖名稱</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                    <a><i class="fas fa-bars"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 出單機 -->
+                    <div id="mainHardware">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title">出單機</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th><span class="content">狀態</span></th>
+                                            <th><span class="content">ID</span></th>
+                                            <th><span class="content">類型</span></th>
+                                            <th><span class="content">名稱</span></th>
+                                            <th><span class="content">序號</span></th>
+                                            <th><span class="content">密鑰</span></th>
+                                            <th><span class="content">伺服器</span></th>
+                                            <th><span class="content">音量</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr class="edit">
+                                            <td></td>
+                                            <td align="center">
+                                                <input class="input" type="text" placeholder="" style="width: 80px;">
+                                            </td>
+                                            <td align="center">
+                                                <div class="dropdown">
+                                                    <select name="type">
+                                                        <option value="出單機">出單機</option>
+                                                        <option value="標籤機">標籤機</option>
+                                                    </select>
+                                                    <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <input class="input" type="text" placeholder="" style="width: 80px;">
+                                            </td>
+                                            <td align="center">
+                                                <input class="input" type="text" placeholder="" style="width: 80px;">
+                                            </td>
+                                            <td align="center">
+                                                <input class="input" type="text" placeholder="" style="width: 80px;">
+                                            </td>
+                                            <td align="center">
+                                                <div class="dropdown">
+                                                    <select name="type">
+                                                        <option value="IIOT">IIOT</option>
+                                                    </select>
+                                                    <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="dropdown">
+                                                    <select name="type">
+                                                        <option value="大">大</option>
+                                                        <option value="中">中</option>
+                                                        <option value="小">小</option>
+                                                    </select>
+                                                    <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-cog"></i></a>
+                                                    <a><i class="fas fa-unlock"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="state on"></div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">1234567890</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">出單機</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">快一點餐廳出單機</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">1234567890</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">********</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">IIOT</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">中</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-cog"></i></a>
+                                                    <a><i class="fas fa-unlock"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <div class="state off"></div>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">1234567890</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">標籤機</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">快一點餐廳出單機</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">1234567890</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">********</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">IIOT</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">小</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-cog"></i></a>
+                                                    <a><i class="fas fa-unlock"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 金流 -->
+                    <div id="mainPayment">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title">QR Pay商家</span>
+                                        <a class="setting main"><i class="fas fa-cog"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item" style="justify-content: space-between;">
+                                        <div class="item" style="width: 100%;">
+                                            <span class="content" style="width: 84px; margin-right: 5px;">TapPay</span>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Apple.png">
+                                                    <span>Apple Pay</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Google.png">
+                                                    <span>Google Pay</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment gray">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/JKO.png">
+                                                    <span>街口支付</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Credit.png">
+                                                    <span>信用卡</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="setting"><i class="fas fa-cog"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item" style="justify-content: space-between;">
+                                        <div class="item" style="width: 100%;">
+                                            <span class="content" style="width: 84px; margin-right: 5px;">Olink</span>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Line.png">
+                                                    <span>LINE Pay</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment gray">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Credit.png">
+                                                    <span>信用卡</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="setting"><i class="fas fa-cog"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item" style="justify-content: space-between;">
+                                        <div class="item" style="width: 100%;">
+                                            <span class="content" style="width: 84px; margin-right: 5px;">台灣Pay</span>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Bank.png">
+                                                    <span>金融卡</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Credit.png">
+                                                    <span>信用卡 & 金融卡</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="setting"><i class="fas fa-cog"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item" style="justify-content: space-between;">
+                                        <div class="item" style="width: 100%;">
+                                            <span class="content" style="margin-right: 5px;">第三方行動支付</span>
+                                            <div class="payment gray">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Line.png">
+                                                    <span>LINE Pay</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/JKO.png">
+                                                    <span>街口支付</span>
+                                                </div>
+                                            </div>
+                                            <div class="payment">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div class="logo">
+                                                    <img src="./img/Easy.png">
+                                                    <span>悠遊付</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="setting"><i class="fas fa-cog"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 合約 -->
+                    <div id="mainContract">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title">合約</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th style="min-width: 30px;"><span class="content">#</span></th>
+                                            <th><span class="content">方案</span></th>
+                                            <th><span class="content">合約期限</span></th>
+                                            <th><span class="content">系統截止日</span></th>
+                                            <th><span class="content">合約訂單編號</span></th>
+                                            <th><span class="content">合約狀態</span></th>
+                                            <th><span class="content">系統狀態</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr class="edit">
+                                            <td></td>
+                                            <td align="center">
+                                                <div class="dropdown">
+                                                    <select name="type">
+                                                        <option value="基本方案">基本方案</option>
+                                                        <option value="行銷方案">行銷方案</option>
+                                                    </select>
+                                                    <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                                </div>
+                                            </td>
+                                            <td align="center">
+                                                <div class="dateRange">
+                                                    <input type="date">
+                                                    <span class="content">-</span>
+                                                    <input type="date">
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-save"></i></a>
+                                                    <a><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <span class="content">1</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">基本方案</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">2021/09/23 - 2021/09/30</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">2021/10/07</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">0987654321</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">normal</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">ON</span>
+                                            </td>
+                                            <td align="center">
+                                                <a class="textButton"><span>停用系統</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <span class="content">2</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">基本方案</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">2021/09/23 - 2021/09/30</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">2021/10/07</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">0987654321</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">normal</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">ON</span>
+                                            </td>
+                                            <td align="center">
+                                                <a class="textButton"><span>停用系統</span></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 優惠 -->
+                    <div id="mainDiscount">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <div class="item">
+                                        <span class="title">優惠</span>
+                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th><span class="content">名稱</span></th>
+                                            <th><span class="content">時間</span></th>
+                                            <th><span class="content">取餐方式</span></th>
+                                            <th><span class="content">門檻</span></th>
+                                            <th><span class="content">人數</span></th>
+                                            <th><span class="content">會員</span></th>
+                                            <th><span class="content">優惠方式</span></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">名稱</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">2021/09/23 - 2021/09/30</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">全部</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">不限</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">不限</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">不限</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">折價10元</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">名稱</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">2021/09/23 - 2021/09/30</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">自取</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">數量滿5個</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">1人</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">新戶</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">折價*1個</span>
+                                            </td>
+                                            <td align="center">
+                                                <div class="action">
+                                                    <a><i class="fas fa-pen"></i></a>
+                                                    <a><i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 串接 -->
+                    <div id="mainApi">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">接單平台</span>
+                                    <div class="item">
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/UberEats.png">
+                                                <span>Ubereats Pro</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="cover">
+                                                <span>未啟用</span>
+                                            </div>
+                                            <div class="logo">
+                                                <img src="./img/Foodpanda.png">
+                                                <span>Foodpanda Pro</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="cover">
+                                                <span>未啟用</span>
+                                            </div>
+                                            <div class="logo">
+                                                <img src="./img/UberEats.png">
+                                                <span>Ubereats Lite</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/Foodpanda.png">
+                                                <span>Foodpanda Lite</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/LineSpot.png">
+                                                <span>Line Spot</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/GoFoodie.png">
+                                                <span>GoFoodie</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">加值服務</span>
+                                    <div class="item">
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/IDOO.png">
+                                                <span>IDOO</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/Cup.png">
+                                                <span>寄杯券服務串接</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/TTPUSH.png">
+                                                <span>TTPUSH台東金幣</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/APP.png">
+                                                <span>APP串接網址</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box">
+                                    <span class="title">POS串接</span>
+                                    <div class="item">
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/LaFresh.png">
+                                                <span>益欣</span>
+                                            </div>
+                                        </a>
+                                        <a class="api">
+                                            <div class="logo">
+                                                <img src="./img/GS.png">
+                                                <span>社守</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 紀錄 -->
+                    <div id="mainRecord">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="box" style="position: relative;">
+                                    <span class="title">紀錄</span>
+                                    <div class="search">
+                                        <div class="dropdown">
+                                            <select name="type">
+                                                <option value="全部">全部</option>
+                                                <option value="商店">商店</option>
+                                                <option value="進階設定">進階設定</option>
+                                                <option value="時間">時間</option>
+                                                <option value="物流">物流</option>
+                                                <option value="出單機">出單機</option>
+                                                <option value="金流">金流</option>
+                                                <option value="合約">合約</option>
+                                                <option value="優惠">優惠</option>
+                                                <option value="串接">串接</option>
+                                                <option value="紀錄">紀錄</option>
+                                            </select>
+                                            <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                        </div>
+                                        <div class="icon"><i class="fas fa-search fa-xs"></i></div>
+                                        <input type="text" placeholder="搜尋">
+                                        <!-- <a class="icon"><i class="fas fa-times fa-xs"></i></a> -->
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th><span class="content">修改時間</span></th>
+                                            <th><span class="content">分類</span></th>
+                                            <th><span class="content">項目</span></th>
+                                            <th><span class="content">內容</span></th>
+                                            <th><span class="content">修改者</span></th>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <span class="content">2021/09/23 13:10</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">商店</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">名稱</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">快一點餐廳</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">Peter</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <span class="content">2021/09/23 13:10</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">物流</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">最低外送數量</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">5項商品</span>
+                                            </td>
+                                            <td align="center">
+                                                <span class="content">Mary</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Script -->
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>商店概覽</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="bodyOverview">
+            <!-- API Popup -->
+            <div id="popApi" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="item">
+                        <img class="titleImg" src="./img/UberEats.png">
+                        <span class="title">UberEats Pro</span>
+                    </div>
+                    <div id="main">
+                        <div class="areaH">
+                            <div class="areaV">
+                                <div class="item" style="height: 40px;">
+                                    <span class="content" style="min-width: 92px;">啟用</span>
+                                    <label class="switch" style="margin-left: 10px;">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <span class="content" style="min-width: 100px;">Ubereats UIUD</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item" style="height: 40px;">
+                                    <span class="content" style="min-width: 100px;">串接Key設定</span>
+                                    <label class="check" style="margin-left: 10px;">
+                                        <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                        <span class="checkmark checkbox"></span>
+                                        <div class="text">使用預設帳號</div>
+                                    </label>
+                                </div>
+                                <div class="item">
+                                    <span class="content" style="min-width: 100px;">Client ID</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item">
+                                    <div style="display: flex; flex-direction: column;">
+                                        <span class="content">Client Secret</span>
+                                        <span class="remark" style="margin-top: -5px;">可勾選預設用點點帳號</span>
+                                    </div>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                                <div class="item">
+                                    <span class="content" style="min-width: 100px;">樣板ID</span>
+                                    <input class="input" type="text" style="margin-left: 10px;" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="button cancel">取消</a>
+                        <a class="button submit">新增</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

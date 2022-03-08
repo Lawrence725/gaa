@@ -1,0 +1,283 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+
+// Color
+@c-1:   #F96332;
+@c-2:   #FEE0D6;
+@c-3:   #A0D468;
+@c-4:   #5D9CEC;
+@c-g1:  #333333;
+@c-g2:  #4F4F4F;
+@c-g3:  #828282;
+@c-g4:  #BDBDBD;
+@c-g5:  #E0E0E0;
+@c-g6:  #F2F2F2;
+@c-bg:  #F5F6FA;
+@c-red: #EB5757;
+@c-green: #27AE60;
+
+body { margin: 0; background-color: #EBECF1; }
+
+#bodyOverview { margin: 50px 0; display: flex; flex-direction: column; align-items: center; background-color: #EBECF1; font-family: 'Montserrat';
+    
+    // Unique
+    .timeChart { width: 100%; height: 500px; }
+    .tableLabel { width: 100%; margin-top: 10px; display: flex; justify-content: center;
+        .color { width: 30px; height: 8px; border-radius: 99px; margin: 0 5px 0 20px; background-color: @c-1;
+            &.color2 { background-color: @c-3; }
+            &.color3 { background-color: @c-4; }
+        }
+    }
+    
+    // Common
+    a { text-decoration: none !important; }
+    a:hover { cursor: pointer; box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2); }
+    input { border: 0; padding: 0; font-family: 'Montserrat'; color: @c-g1; }
+    input:focus { box-shadow: none !important; outline: none; }
+    textarea { border: 0; }
+    textarea:focus { box-shadow: none !important; outline: none; }
+    select { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; border: 0; font-family: 'Montserrat'; }
+    select:hover { cursor: pointer; }
+    *, :after, :before  { box-sizing: unset; -webkit-box-sizing: unset; }
+
+    // Search
+    #search { width: 100%; height: 50px; margin-bottom: 20px; border-radius: 10px; display: flex; align-items: center; background-color: white;
+        .icon { width: 50px; height: 100%; display: flex; align-items: center; justify-content: center; color: @c-g4;}
+        input { width: 100%; height: 100%; font-size: 18px; }
+    }
+    .el-select.select-primary { width: 100%; height: 100%;
+        .el-input.el-input--suffix { height: 100%;
+            .el-input__inner { height: 100%; color: black; background: transparent;
+                &::placeholder { color: @c-g3; }
+                &:-ms-input-placeholder { color: @c-g3; }
+                &::-ms-input-placeholder { color: @c-g3; }
+                &:hover { box-shadow: none; }
+            }
+        }
+    }
+
+    #container { width: 100%; display: flex; justify-content: space-between;
+        // Menu
+        #tabs { min-width: 180px;
+            .tab { width: calc(100% - 24px); padding: 5px; margin-bottom: 20px; border-radius: 5px; display: flex; flex-direction: column; background-color: white;
+                &:hover { background-color: @c-2; }
+                &.active { background-color: @c-1;
+                    .tabTitle { color: white; }
+                    .areaH .areaV { color: white; }
+                    .error { color: white; }
+                }
+                .tabTitle { display: flex; align-items: center; font-size: 18px; color: @c-g1;
+                    .icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
+                    .error { margin-left: auto; color: @c-red; }
+                }
+                .areaH { display: flex;
+                    .areaV { width: 50%; margin-left: 5px; display: flex; flex-direction: column; font-size: 14px; color: @c-g3;
+                        span { margin-top: 5px; }
+                    }
+                }
+            }
+        }
+        
+        // Main
+        #main { width: 100%;
+            .areaH { width: 100%; display: flex;
+                .areaV { width: 100%; margin-left: 20px; display: flex; flex-direction: column; }
+                .box { height: 100%; max-width: 100%; padding: 5px 10px; margin-bottom: 20px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-around; background-color: white; color: @c-g1;
+                    &.inputS {
+                        .item { justify-content: space-between; }
+                        span { min-width: 160px; }
+                    }
+                    &.inputM {
+                        span.content { min-width: 120px; }
+                    }
+                    &.inputL {
+                        .item { justify-content: space-between; }
+                        span { min-width: 70px; }
+                    }
+                    &.start { justify-content: flex-start }
+                }
+                .item { display: flex; align-items: center; }
+                .gray { color: @c-g4; filter: grayscale(100%) }
+            }
+        }
+    }
+
+    // Unique
+    .payment { width: calc(25% - 52.25px); padding: 5px 10px; margin: 5px; border-radius: 10px; display: flex; align-items: center; background-color: @c-bg; }
+    .api { width: calc(16.66% - 30px); height: calc(100% - 20px); padding: 5px 10px; margin: 5px; border-radius: 10px; position: relative; display: flex; background-color: @c-bg;
+        .cover { width: 100%; height: 100%; border-radius: 10px; top: 0; left: 0; position: absolute; background: rgba(0, 0, 0, 0.6); pointer-events: none;
+            span { top: 15px; left: 0; position: absolute; color: white; transform: rotate(-45deg); }
+        }
+    }
+    .logo { width: 100%; margin: 5px; display: flex; flex-direction: column; align-items: center;
+        img { height: 60px; }
+        span { margin-top: 5px; font-size: 14px; text-align: center; }
+    }
+
+    // Font
+    .title { margin: 5px 0; font-size: 18px; color: black; white-space: nowrap; }
+    .content { margin: 5px 0; font-size: 14px; color: black; font-weight: normal; white-space: nowrap; }
+    .remark { font-size: 12px; color: @c-g3; white-space: nowrap; }
+    .double { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+
+    // Button
+    .add { width: 20px; height: 20px; margin: 0 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center; color: white; background-color: @c-1; }
+    .save { width: 20px; height: 20px; margin: 0 10px; display: flex; align-items: center; justify-content: center; color: @c-1; }
+    .setting { width: 20px; height: 20px; margin: 0 10px; display: flex; align-items: center; justify-content: center; color: @c-g4;
+        &.main { color: @c-1; }
+    }
+    .textButton { padding: 2.5px 7.5px; margin: 0 10px; border-radius: 99px; background-color: @c-1; font-size: 12px; color: white; }
+
+    // Input
+    .state { width: 10px; height: 10px; border-radius: 50%; background-color: @c-g3;
+        &.on { background-color: @c-green; }
+        &.off { background-color: @c-red; }
+    }
+    .input { width: 100%; height: 20px; padding: 5px 10px; margin: 5px 0; border-radius: 99px; font-size: 14px; background-color: @c-bg; }
+    .number { width: 100%; height: 30px; padding-left: 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
+        input { width: 100%; height: 100%; border-radius: 99px; font-size: 14px; text-align: left; color: @c-g1; background-color: transparent; }
+        .unit { min-width: 45%; margin: 0; line-height: 30px; text-align: left; }
+    }
+    textarea { width: calc(100% - 20px); height: calc(100% - 30px); padding: 10px; margin: 5px 0; border-radius: 10px; font-size: 14px; background-color: @c-bg; }
+    .textarea { width: 100%; height: 100%; border: 0; border-radius: 10px; position: relative; background-color: @c-bg;
+        .save { top: -25px; right: 0; position: absolute; }
+        .ql-snow { border: 0; }
+        .ql-toolbar { border-bottom: 1px solid white; }
+    }
+    .map { width: 100%; height: 150px; margin: 5px 0; border-radius: 10px; background-color: @c-bg; }
+    .dropdown { width: 100px; margin: 5px 0; position: relative; display: flex; align-items: center;
+        select { width: 100%; height: 20px; padding: 5px 10px; margin: 0; border-radius: 99px; font-size: 14px; color: @c-g1; background-color: @c-bg; }
+        .arrow { width: 20px; height: 100%; top: 0; right: 5px; position: absolute; display: flex; align-items: center; justify-content: center; color: @c-1; pointer-events: none; }
+    }
+    .date { width: fit-content; padding: 0 10px; margin: 5px 0; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c-bg;
+        .delete { margin-left: 10px; color: @c-g4; }
+    }
+    // Time
+    .el-date-editor.el-input, .el-date-editor.el-input__inner { width: fit-content !important; height: 30px; padding: 0 10px; margin: 5px; border: 0; border-radius: 99px; background-color: @c-bg; }
+    .el-range-input { background-color: transparent; }
+    .el-row:after, .el-row:before { content: unset; }
+    .timeRange { width: fit-content; height: 30px; padding: 0 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: @c-bg;
+        select { font-size: 14px; color: @c-g1; background-color: @c-bg; }
+        .delete { margin-left: 10px; color: @c-g4; }
+    }
+    .dateRange { width: fit-content; height: 30px; padding: 0 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; justify-content: center; background-color: @c-bg;
+        input { font-size: 14px; color: @c-g1; background-color: @c-bg; }
+    }
+    .search { width: 250px; padding: 0 3px; border-radius: 15px 7.5px 7.5px 15px; top: 5px; right: 5px; position: absolute; display: flex; align-items: center; background-color: @c-bg;
+        .dropdown { min-width: 80px; height: 20px;
+            select { height: 24px; padding: 0 0 0 5px; background-color: white; }
+        }
+        .icon { min-width: 25px; height: 100%; display: flex; align-items: center; justify-content: center; color: @c-g4;}
+        input { width: 100%; height: 30px; font-size: 14px; background-color: transparent; }
+    }
+    .tabs { width: 100%; height: 24px; padding: 3px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
+        .tab { width: 100%; height: 100%; padding: 0 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center;
+            &.active { background-color: @c-1; color: white; box-shadow: unset; }
+            &:not(.active):hover { background-color: @c-2; }
+            span { font-size: 12px; }
+            .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+        }
+    }
+    .switch { position: relative; display: inline-block; min-width: 34px; height: 20px; margin-right: 5px; margin-bottom: 0;
+        input { opacity: 0; width: 0; height: 0;
+            &:checked + .slider { background-color: @c-green; }
+            &:focus + .slider { box-shadow: 0 0 1px @c-green; }
+            &:checked + .slider:before { -webkit-transform: translateX(14px); -ms-transform: translateX(14px); transform: translateX(14px); }
+        }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; border-radius: 34px; background-color: @c-g4; -webkit-transition: .4s; transition: .4s;
+            &:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; -webkit-transition: .4s; transition: .4s; }
+        }
+    }
+    .check { width: fit-content; min-height: 20px; padding: 5px 5px 5px 25px; border-radius: 5px; position: relative; display: flex; align-items: center; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 14px;
+        &.box4 { width: calc(25% - 20px); padding-left: 5px; margin: 5px; border-radius: 10px; justify-content: center; background-color: @c-bg;
+            .icon { width: 30px; height: 30px; right: 0; bottom: 0; border-radius: 50%; position: absolute; display: flex; align-items: center; justify-content: center; color: @c-g3; }
+        }
+        &:hover { background: @c-2; }
+        /* On mouse-over, add a grey background color */
+        &:hover input ~ .checkmark { background-color: white; }
+        &:hover .number { background-color: @c-bg !important; }
+        .text { margin-left: 5px; }
+        /* Hide the browser's default radio button */
+        input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;
+            /* When the radio button is checked, add a blue background */
+            &:checked ~ .checkmark { background-color: @c-1; }
+            /* Show the indicator (dot/circle) when checked */
+            &:checked ~ .checkmark:after { display: block; }
+        }
+        .checkmark.radio { position: absolute; top: 7px; left: 7px; height: 12px; width: 12px; border-radius: 50%; border: 2px solid @c-1; background-color: white; 
+            /* Create the indicator (the dot/circle - hidden when not checked) */
+            &:after { content: ""; position: absolute; display: none; }
+            /* Style the indicator (dot/circle) */
+            &:after { top: 4px; left: 4px; width: 4px; height: 4px; border-radius: 50%; background: white; }
+        }
+        .checkmark.checkbox { position: absolute; top: 7px; left: 7px; height: 12px; width: 12px; border-radius: 2px; border: solid 2px @c-1; background-color: white;
+            /* Create the checkmark/indicator (hidden when not checked) */
+            &:after { content: ""; position: absolute; display: none; }
+            /* Style the checkmark/indicator */
+            &:after { left: 3px; top: 0.5px; width: 3px; height: 6px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+        }
+    }
+    table { border-collapse: unset; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 10px;
+        tr:not(:first-child) { background-color: @c-bg; }
+        th { text-align: center; }
+        td { padding: 5px 2.5px;
+            &:first-child { border-radius: 10px 0 0 10px; }
+            &:last-child { border-radius: 0 10px 10px 0; }
+            span { line-height: 30px; white-space: unset !important; }
+        }
+        .week { width: fit-content; height: 30px; padding: 0 10px; border-radius: 99px; display: flex; align-items: center;
+            a,div { margin: 0 5px; }
+        }
+        .action { width: fit-content; display: flex; align-items: center;
+            a { width: 20px; height: 20px; margin: 0 5px; display: flex; align-items: center; justify-content: center; color: @c-g4; }
+        }
+        .off { color: @c-g5; }
+        .edit {
+            .input, .dropdown > select, .timeRange, .timeRange > select, .dateRange, .dateRange > input, .number, .number > input, .week, .el-date-editor.el-input__inner, .el-range-input { background-color: white; }
+            .action > a { color: @c-1; }
+        }
+    }
+
+    // Popup
+    .modal { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: flex; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: auto; z-index: 3; background-color: rgba(0,0,0,0.5);
+        // Common
+        .close { top: 20px; right: 20px; position: absolute; color: @c-g4; z-index: 3; font-size: 28px; line-height: 16px;
+            &:hover, &:focus { color: @c-g1; text-decoration: none; cursor: pointer; }
+        }
+        .item { display: flex; align-items: center; }
+        #main { width: 100%; margin: 20px 0;
+            .areaH { width: calc(100% + 10px); margin: 0 -5px; display: flex;
+                .areaV { width: 100%; margin: 0 5px; display: flex; flex-direction: column; }
+                .box { height: 100%; max-width: 100%; padding: 5px 10px; margin-bottom: 10px; border-radius: 5px; display: flex; flex-direction: column; justify-content: space-around; background-color: white; color: @c-g1;
+                    input, .tabs, .number, .number > input { background-color: @c-bg;}
+                }
+                .gray { color: @c-g4; filter: grayscale(100%) }
+                .red { color: @c-red; }
+            }
+        }
+        .titleImg { height: 50px; margin-right: 10px; }
+        .button { width: 100%; height: 30px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 14px;
+            &.cancel { color: @c-1; background-color: white; margin-right: 10px; box-shadow: 0px 50px 100px rgba(55, 84, 170, 0.1);
+                &:hover { background-color: @c-2; }
+            }
+            &.submit { color: white; background-color: @c-1; }
+        }
+        input, .tabs, .number, .number > input { background-color: white;}
+        // Unique
+        .copy { width: 20px; height: 20px; margin-left: 10px; display: flex; align-items: center; justify-content: center; color: @c-1; }
+        .price { padding: 5px 10px; margin: 5px 0; border-radius: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: @c-bg;
+            &.result { background-color: @c-2;
+                span { color: @c-1; }
+            }
+        }
+        &#popLogistics  > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popCalculate  > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popQRpay      > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popPayment    > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popApi        > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popCup        > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popTTpush     > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popApp        > .modal-content { width: 300px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popDelivery   > .modal-content { width: fit-content; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+        &#popDiscount   > .modal-content { width: 550px; padding: 20px; margin: auto; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg; }
+    }
+}
