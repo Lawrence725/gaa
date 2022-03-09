@@ -95,6 +95,9 @@ body {
 #bodyOverview select:hover {
   cursor: pointer;
 }
+#bodyOverview label {
+  margin-bottom: 0 !important;
+}
 #bodyOverview *,
 #bodyOverview :after,
 #bodyOverview :before {
