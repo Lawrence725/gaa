@@ -238,8 +238,12 @@ body {
   padding: 0;
   background-color: transparent;
 }
-#bodyOverview .grid .grid1 span {
+#bodyOverview .grid .grid1 a span {
+  margin-left: 20px;
   color: #BDBDBD;
+}
+#bodyOverview .grid .grid1 .check {
+  margin-right: 40px;
 }
 #bodyOverview .grid .grid1 .active {
   border-bottom: 2px solid #F96332;
