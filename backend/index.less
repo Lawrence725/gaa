@@ -83,20 +83,14 @@ body { margin: 0; background-color: #EBECF1; }
             &.width             { width: calc(100% - 10px); }}
         &.padding.margin.width  { width: calc(100% - 20px); }}
     .grid { width: calc(100% - 10px); display: grid; grid-template-columns: 50% 50%; grid-template-rows: auto; column-gap: 10px; row-gap: 10px; grid-template-areas: 
-        "type type"
         "rule member"
         "rule number"
         "discount discount";
         > div { padding: 10px; border-radius: 5px; background-color: @c-bg; }
-        .grid1 { grid-area: type; padding: 0; background-color: transparent;
-            a span { margin-left: 20px; color: @c-g4; }
-            .check { margin-right: 40px; }
-            .active { border-bottom: 2px solid @c-1; border-radius: 0 !important; color: @c-1; 
-                span { color: @c-1; }}}
-        .grid2 { grid-area: rule; }
-        .grid3 { grid-area: member; }
-        .grid4 { grid-area: number; }
-        .grid5 { grid-area: discount; }
+        .grid1 { grid-area: rule; }
+        .grid2 { grid-area: member; }
+        .grid3 { grid-area: number; }
+        .grid4 { grid-area: discount; }
     }
     #container { width: 100%; display: flex; justify-content: space-between;
         // Menu
@@ -304,12 +298,18 @@ body { margin: 0; background-color: #EBECF1; }
         &.notice .popBody { width: 300px; height: fit-content; }
         &.popInvoice .popBody { width: 500px; }
         &.popDiscount .popBody { width: 700px;
-            .popMain.full { margin-top: -10px; border: 10px solid white; }
+            .popMain.full { margin-top: -20px; border: 10px solid white; }
             .number { width: 90px; }
             .dropdown { width: 120px; }
             .flexV { background-color: white;
                 .input, .dateRange { width: calc(100% - 20px) !important; }
-                input, .tabs, .number, .number > input { background-color: @c-bg !important; }}}
+                input, .tabs, .number, .number > input { background-color: @c-bg !important; }}
+            .type { grid-area: type; padding: 0; position: relative; background-color: transparent;
+                > div:nth-child(2) { position: absolute; }
+                a span { margin-left: 20px; color: @c-g4; }
+                .check { margin-right: 40px; z-index: 1; }
+                .active { border-bottom: 2px solid @c-1; border-radius: 0 !important; color: @c-1; 
+                    span { color: @c-1; }}}}
         .close { top: 20px; right: 20px; height: 20px; width: 20px; position: absolute; display: flex; align-items: center; justify-content: center; color: @c-g4;
             &:hover, &:focus { color: @c-g1; }}
         .popBody { width: fit-content; min-width: 300px; max-height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg;
