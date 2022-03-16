@@ -27,7 +27,7 @@
                             <div class="icon"><i class="fas fa-store"></i></div>
                             <span>商店</span>
                         </div>
-                        <div class="areaH">
+                        <!-- <div class="areaH">
                             <div class="areaV">
                                 <span>系統狀態</span>
                                 <span>取餐方式</span>
@@ -40,7 +40,7 @@
                                 <span>商店資料</span>
                                 <span>系統資料</span>
                             </div>
-                        </div>
+                        </div> -->
                     </a>
                     <!-- Tab -->
                     <a class="tab">
@@ -55,7 +55,7 @@
                             <div class="icon"><i class="far fa-calendar-alt"></i></div>
                             <span>時間</span>
                         </div>
-                        <div class="areaH">
+                        <!-- <div class="areaH">
                             <div class="areaV">
                                 <span>供餐時段</span>
                                 <span>備餐時間</span>
@@ -67,23 +67,26 @@
                                 <span>營業時間</span>
                                 <span>公休日</span>
                             </div>
-                        </div>
+                        </div> -->
                     </a>
                     <!-- Tab -->
                     <a class="tab">
                         <div class="tabTitle">
                             <div class="icon"><i class="fas fa-truck"></i></div>
                             <span>物流</span>
-                            <div class="icon error"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="flexH error">
+                                <span class="remark">未儲存</span>
+                                <div class="icon"><i class="fas fa-save fa-sm"></i></div>
+                            </div>
                         </div>
-                        <div class="areaH">
+                        <!-- <div class="areaH">
                             <div class="areaV">
                                 <span>外送版本</span>
                             </div>
                             <div class="areaV">
                                 <span>運送條件</span>
                             </div>
-                        </div>
+                        </div> -->
                     </a>
                     <!-- Tab -->
                     <a class="tab">
@@ -91,14 +94,14 @@
                             <div class="icon"><i class="fas fa-receipt"></i></div>
                             <span>出單機</span>
                         </div>
-                        <div class="areaH">
+                        <!-- <div class="areaH">
                             <div class="areaV">
                                 <span>客製化樣板</span>
                             </div>
                             <div class="areaV">
                                 <span>標籤機設定</span>
                             </div>
-                        </div>
+                        </div> -->
                     </a>
                     <!-- Tab -->
                     <a class="tab">
@@ -106,14 +109,14 @@
                             <div class="icon"><i class="fas fa-coins"></i></div>
                             <span>金流</span>
                         </div>
-                        <div class="areaH">
+                        <!-- <div class="areaH">
                             <div class="areaV">
                                 <span>LINE Pay</span>
                             </div>
                             <div class="areaV">
                                 <span>Apple Pay</span>
                             </div>
-                        </div>
+                        </div> -->
                     </a>
                     <!-- Tab -->
                     <a class="tab">
@@ -275,7 +278,7 @@
                                 </div>
                                 <div class="box">
                                     <span class="title">商店資料</span>
-                                    <table class="content fit empty">
+                                    <table class="content empty">
                                         <tr>
                                             <td><span class="">統編</span></td>
                                             <td><input class="input" type="text" placeholder="Invioce"></td>
@@ -314,7 +317,7 @@
                                 </div>
                                 <div class="box">
                                     <span class="title">申請人資料</span>
-                                    <table class="content fit empty">
+                                    <table class="content empty">
                                         <tr>
                                             <td><span class="">信箱</span></td>
                                             <td><input class="input" type="text" placeholder=""></td>
@@ -328,7 +331,7 @@
                                 </div>
                                 <div class="box">
                                     <span class="title">系統資料</span>
-                                    <table class="content fit empty">
+                                    <table class="content empty">
                                         <tr>
                                             <td><span class="">Wifiotg 商店ID</span></td>
                                             <td><input class="input" type="text" placeholder=""></td>
@@ -1566,7 +1569,7 @@
                                                 <img src="./img/Lalamove.png">
                                                 <span>Lalamove</span>
                                             </div>
-                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                            <a class="icon" onclick="popLogistics()"><i class="fas fa-cog"></i></a>
                                         </label>
                                         <label class="check box4">
                                             <input type="radio" name="radio1"> <!-- checked="checked" -->
@@ -1575,7 +1578,7 @@
                                                 <img src="./img/GBG.png">
                                                 <span>全球</span>
                                             </div>
-                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                            <a class="icon" onclick="popLogistics()"><i class="fas fa-cog"></i></a>
                                         </label>
                                         <label class="check box4">
                                             <input type="radio" name="radio1"> <!-- checked="checked" -->
@@ -1584,7 +1587,7 @@
                                                 <img src="./img/PandaGo.png">
                                                 <span>PandaGO</span>
                                             </div>
-                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                            <a class="icon" onclick="popLogistics()"><i class="fas fa-cog"></i></a>
                                         </label>
                                         <label class="check box4">
                                             <input type="radio" name="radio1"> <!-- checked="checked" -->
@@ -1593,7 +1596,7 @@
                                                 <img src="./img/GIT.png">
                                                 <span>GIT</span>
                                             </div>
-                                            <a class="icon"><i class="fas fa-cog"></i></a>
+                                            <a class="icon" onclick="popLogistics()"><i class="fas fa-cog"></i></a>
                                         </label>
                                     </div>
                                 </div>
@@ -2496,6 +2499,53 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup (Logistics) -->
+            <section id="popLogistics" class="popLogistics popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <div class="flexH">
+                            <div class="img"><img src="./img/Lalamove.png"></div>
+                            <span class="title">Lalamove</span>
+                        </div>
+                    </section>
+                    <section class="popMain">
+                        <div class="flexH margin">
+                            <table class="content empty">
+                                <tr>
+                                    <td><span>Merchant ID</span></td>
+                                    <td><input class="input" type="text" placeholder="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td><span>Access Key</span></td>
+                                    <td><input class="input" type="text" placeholder="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td><span>Access Token</span></td>
+                                    <td><input class="input" type="text" placeholder="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td><span>預設物流</span></td>
+                                    <td>
+                                        <div class="dropdown full">
+                                            <select name="type" class="fM">
+                                                <option value="Lalamove">Lalamove</option>
+                                                <option value="全球">全球</option>
+                                                <option value="PandaGO">PandaGO</option>
+                                            </select>
+                                            <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit"><span class="remark">儲存</span></a>
+                    </section>
+                </div>
+            </section>
             <!-- Popup (Delete) -->
             <section id="popDelete" class="popup notice">
                 <div class="popBody">

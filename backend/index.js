@@ -1,3 +1,15 @@
+// Popup (Logistics)
+function popLogistics() {
+    var popLogistics    = document.getElementById("popLogistics");
+    var close           = popLogistics.getElementsByClassName("close")[0];
+    var submit          = popLogistics.getElementsByClassName("submit")[0];
+    var cancel          = popLogistics.getElementsByClassName("cancel")[0];
+    close.onclick       = function() { popLogistics.style.display = "none"; }
+    submit.onclick      = function() { popLogistics.style.display = "none"; }
+    cancel.onclick      = function() { popLogistics.style.display = "none"; }
+    window.onclick      = function(event) { if (event.target == popLogistics) { popLogistics.style.display = "none"; }}
+    popLogistics.style.display = "flex"; }
+
 // Popup (Delete)
 function popDelete() {
     var popDelete   = document.getElementById("popDelete");
