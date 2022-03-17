@@ -168,6 +168,9 @@ body {
 #bodyOverview .silver {
   color: #828282 !important;
 }
+#bodyOverview .red {
+  color: #EB5757 !important;
+}
 #bodyOverview .background {
   background-color: #F5F6FA !important;
 }
@@ -1085,10 +1088,6 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
 }
-#bodyOverview .popup.notice .popBody {
-  width: 300px;
-  height: fit-content;
-}
 #bodyOverview .popup.popLogistics .img {
   width: 60px;
   height: auto;
@@ -1096,12 +1095,23 @@ body {
 #bodyOverview .popup.popInvoice .popBody {
   width: 500px;
 }
+#bodyOverview .popup.popInvoice .popBody .remark.red {
+  margin: -5px 0 5px 5px;
+}
 #bodyOverview .popup.popDiscount .popBody {
   width: 700px;
+}
+#bodyOverview .popup.popDiscount .popBody .popMain:not(.full) {
+  height: fit-content !important;
+  overflow: initial;
 }
 #bodyOverview .popup.popDiscount .popBody .popMain.full {
   margin-top: -20px;
   border: 10px solid white;
+  background-color: white;
+}
+#bodyOverview .popup.popDiscount .popBody .popMain.full::-webkit-scrollbar-thumb {
+  border: 2.5px solid white;
 }
 #bodyOverview .popup.popDiscount .popBody .number {
   width: 90px;
@@ -1163,8 +1173,9 @@ body {
   color: #333333;
 }
 #bodyOverview .popup .popBody {
-  width: fit-content;
   min-width: 300px;
+  max-width: 100%;
+  height: fit-content;
   max-height: calc(100% - 60px);
   padding: 10px;
   margin: 20px;
@@ -1184,33 +1195,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-#bodyOverview .popup .popBody .popMain.full {
-  height: 100%;
-  margin: 15px 5px;
-  border-radius: 5px;
-  align-items: flex-start;
   justify-content: flex-start;
-  background-color: white;
+  overflow-x: hidden;
   overflow-y: auto;
-  /* should match background, can't be transparent */
 }
-#bodyOverview .popup .popBody .popMain.full::-webkit-scrollbar {
+#bodyOverview .popup .popBody .popMain::-webkit-scrollbar {
   -webkit-appearance: none;
 }
-#bodyOverview .popup .popBody .popMain.full::-webkit-scrollbar:vertical {
+#bodyOverview .popup .popBody .popMain::-webkit-scrollbar:vertical {
   width: 10px;
 }
-#bodyOverview .popup .popBody .popMain.full::-webkit-scrollbar-thumb {
+#bodyOverview .popup .popBody .popMain::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #E0E0E0;
-  border: 2.5px solid white;
-}
-#bodyOverview .popup .popBody .popMain .message {
-  width: calc(100% - 10px);
-  margin: 5px;
-  text-align: center;
+  border: 2.5px solid #F5F6FA;
 }
 #bodyOverview .popup .popBody .popFooter {
   display: flex;

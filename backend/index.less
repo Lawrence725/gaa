@@ -65,7 +65,8 @@ body { margin: 0; background-color: #EBECF1; }
 
 
     // Color
-    .silver { color: @c-g3 !important; }
+    .silver     { color: @c-g3 !important; }
+    .red        { color: @c-red !important; }
     .background { background-color: @c-bg !important; }
     .disabled   {
         span { color: @c-g4 !important; }
@@ -300,11 +301,13 @@ body { margin: 0; background-color: #EBECF1; }
 
     // Popup
     .popup { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: none; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: hidden; z-index: 2; background-color: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
-        &.notice .popBody { width: 300px; height: fit-content; }
         &.popLogistics .img { width: 60px; height: auto; }
-        &.popInvoice .popBody { width: 500px; }
+        &.popInvoice .popBody { width: 500px;
+            .remark.red { margin: -5px 0 5px 5px; }}
         &.popDiscount .popBody { width: 700px;
-            .popMain.full { margin-top: -20px; border: 10px solid white; }
+            .popMain:not(.full) { height: fit-content !important; overflow: initial; }
+            .popMain.full { margin-top: -20px; border: 10px solid white; background-color: white;
+                &::-webkit-scrollbar-thumb { border: 2.5px solid white; }}
             .number { width: 90px; }
             .dropdown { width: 120px; }
             .flexV { background-color: white;
@@ -318,14 +321,12 @@ body { margin: 0; background-color: #EBECF1; }
                     span { color: @c-1; }}}}
         .close { top: 20px; right: 20px; height: 20px; width: 20px; position: absolute; display: flex; align-items: center; justify-content: center; color: @c-g4;
             &:hover, &:focus { color: @c-g1; }}
-        .popBody { width: fit-content; min-width: 300px; max-height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg;
+        .popBody { min-width: 300px; max-width: 100%; height: fit-content; max-height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: @c-bg;
             .popHeader { margin: 5px; display: flex; flex-direction: column; }
-            .popMain { margin: 15px 0px; display: flex; flex-direction: column; align-items: center; justify-content: center;
-                &.full { height: 100%; margin: 15px 5px; border-radius: 5px; align-items: flex-start; justify-content: flex-start; background-color: white; overflow-y: auto; 
-                    &::-webkit-scrollbar { -webkit-appearance: none; }
-                    &::-webkit-scrollbar:vertical { width: 10px; }
-                    &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @c-g5; border: 2.5px solid white; } /* should match background, can't be transparent */}
-                .message { width: calc(100% - 10px); margin: 5px; text-align: center; }}
+            .popMain { margin: 15px 0px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; overflow-x: hidden; overflow-y: auto;
+                &::-webkit-scrollbar { -webkit-appearance: none; }
+                &::-webkit-scrollbar:vertical { width: 10px; }
+                &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @c-g5; border: 2.5px solid @c-bg; }}
             .popFooter { display: flex; }
             input, .tabs, .dropdown > select, .number, .number > input { background-color: white !important; }}}
 
