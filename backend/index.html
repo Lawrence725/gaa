@@ -282,7 +282,7 @@
                                         <tr>
                                             <td><span class="">統編</span></td>
                                             <td><input class="input" type="text" placeholder="Invioce"></td>
-                                            <td><a class="save"><i class="fas fa-save"></i></a></td>
+                                            <td align="center"><a class="save"><i class="fas fa-save"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="">名稱</span></td>
@@ -321,7 +321,7 @@
                                         <tr>
                                             <td><span class="">信箱</span></td>
                                             <td><input class="input" type="text" placeholder=""></td>
-                                            <td><a class="save"><i class="fas fa-save"></i></a></td>
+                                            <td align="center"><a class="save"><i class="fas fa-save"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="">電話</span></td>
@@ -335,7 +335,7 @@
                                         <tr>
                                             <td><span class="">Wifiotg 商店ID</span></td>
                                             <td><input class="input" type="text" placeholder=""></td>
-                                            <td><a class="save"><i class="fas fa-save"></i></a></td>
+                                            <td align="center"><a class="save"><i class="fas fa-save"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td><span class="">WEB SSO ID</span></td>
@@ -1607,9 +1607,9 @@
                                 <div class="box" style="position: relative;">
                                     <div class="item">
                                         <span class="title">自訂運送條件</span>
-                                        <a class="add"><i class="fas fa-plus fa-xs"></i></a>
+                                        <a class="add" onclick="popDelivery()"><i class="fas fa-plus fa-xs"></i></a>
                                     </div>
-                                    <a class="textButton" style="top: 10px; right: 0; position: absolute;"><span>試算</span></a>
+                                    <a class="textButton" style="top: 10px; right: 0; position: absolute;" onclick="popCalculate()"><span>試算</span></a>
                                     <div class="map"></div>
                                     <table>
                                         <tr>
@@ -2354,7 +2354,7 @@
                         <div class="areaH">
                             <div class="areaV">
                                 <div class="box">
-                                    <span class="title">是否自動開立</span>
+                                    <span class="title">是否自動開立發票</span>
                                     <div class="flexH width">
                                         <div class="flexH width margin padding background">
                                             <label class="switch">
@@ -2499,6 +2499,82 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup (Calculate) -->
+            <section id="popCalculate" class="popCalculate popup">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">消費者運費試算</span>
+                    </section>
+                    <section class="popMain">
+                        <table class="content empty">
+                            <tr>
+                                <td><span>消費數量</span></td>
+                                <td>
+                                    <div class="number">
+                                        <input type="number" value="5" min="0">
+                                        <span class="content unit">項商品</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>消費金額</span></td>
+                                <td>
+                                    <div class="number">
+                                        <input type="number" value="5" min="0">
+                                        <span class="content unit">元</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tabs">
+                                        <a class="tab">
+                                            <span>距離</span>
+                                        </a>
+                                        <a class="tab active">
+                                            <span>地址</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="number">
+                                        <input type="number" value="5" min="0">
+                                        <span class="content unit">公尺</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit"><span class="remark">試算</span></a>
+                    </section>
+                    <section class="popMain">
+                        <div class="flexH">
+                            <div class="price">
+                                <span class="remark">基礎運費</span>
+                                <span class="remark">$20</span>
+                            </div>
+                            <span class="content">-</span>
+                            <div class="price">
+                                <span class="remark">補貼</span>
+                                <span class="remark">$5</span>
+                            </div>
+                            <span class="content">=</span>
+                            <div class="price result">
+                                <span class="remark">消費者運費</span>
+                                <span class="remark">$15</span>
+                            </div>
+                        </div>
+                        <span class="content">消費者顯示外送條件</span>
+                        <span class="remark">
+                            1. 距離2公里內，並且消費滿250元，外送免運費。<br>
+                            2. 距離2~3公里內，並且消費滿300元，外送免運費。<br>
+                            3. 距離2~3公里內，並且消費滿300元，外送免運費。
+                        </span>
+                    </section>
+                </div>
+            </section>
             <!-- Popup (Logistics) -->
             <section id="popLogistics" class="popLogistics popup">
                 <div class="popBody">
@@ -2510,39 +2586,201 @@
                         </div>
                     </section>
                     <section class="popMain">
-                        <div class="flexH margin">
-                            <table class="content empty">
-                                <tr>
-                                    <td><span>Merchant ID</span></td>
-                                    <td><input class="input" type="text" placeholder="" value=""></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Access Key</span></td>
-                                    <td><input class="input" type="text" placeholder="" value=""></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Access Token</span></td>
-                                    <td><input class="input" type="text" placeholder="" value=""></td>
-                                </tr>
-                                <tr>
-                                    <td><span>預設物流</span></td>
-                                    <td>
-                                        <div class="dropdown full">
-                                            <select name="type" class="fM">
-                                                <option value="Lalamove">Lalamove</option>
-                                                <option value="全球">全球</option>
-                                                <option value="PandaGO">PandaGO</option>
-                                            </select>
-                                            <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+                        <table class="content empty">
+                            <tr>
+                                <td><span>Merchant ID</span></td>
+                                <td><input class="input" type="text" placeholder="" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><span>Access Key</span></td>
+                                <td><input class="input" type="text" placeholder="" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><span>Access Token</span></td>
+                                <td><input class="input" type="text" placeholder="" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><span>預設物流</span></td>
+                                <td>
+                                    <div class="dropdown full">
+                                        <select name="type" class="fM">
+                                            <option value="Lalamove">Lalamove</option>
+                                            <option value="全球">全球</option>
+                                            <option value="PandaGO">PandaGO</option>
+                                        </select>
+                                        <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </section>
                     <section class="popFooter">
                         <a class="button cancel white"><span class="remark">取消</span></a>
                         <a class="button submit"><span class="remark">儲存</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Delivery) -->
+            <section id="popDelivery" class="popDelivery popup">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">新增運送條件</span>
+                    </section>
+                    <section class="popMain">
+                        <div class="grid delivery">
+                            <div class="grid5">
+                                <span class="title">運送設定</span>
+                                <table class="content empty">
+                                    <tr>
+                                        <td><span class="content"><span class="red">*</span> 運費設定</span></td>
+                                        <td>
+                                            <div class="tabs">
+                                                <a class="tab">
+                                                    <span>物流</span>
+                                                </a>
+                                                <a class="tab active">
+                                                    <span>自訂</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">元</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="content"><span class="red">*</span> 最低金額</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">元</span>
+                                            </div>
+                                        </td>
+                                        <td rowspan="2">
+                                            <label class="check">
+                                                <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                                <span class="checkmark checkbox"></span>
+                                                <div class="text">擇一</div>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="content"><span class="red">*</span> 最低數量</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">項商品</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="content"><span class="red">*</span> 外送運費</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">元</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="content"><span class="red">*</span> 外送時間</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="30" min="0">
+                                                <span class="content unit">分鐘</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="grid1">
+                                <span class="title">補貼門檻</span>
+                                <table class="content empty">
+                                    <tr>
+                                        <td><span class="content">最低金額</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">元</span>
+                                            </div>
+                                        </td>
+                                        <td rowspan="2">
+                                            <label class="check">
+                                                <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                                <span class="checkmark checkbox"></span>
+                                                <div class="text">擇一</div>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="content">最低數量</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">項商品</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="content">外送補貼</span></td>
+                                        <td>
+                                            <div class="number">
+                                                <input type="number" value="5" min="0">
+                                                <span class="content unit">元</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="grid6">
+                                <div class="flexV width height">
+                                    <span class="title">運送距離</span>
+                                    <table class="content empty">
+                                        <tr>
+                                            <td colspan="4">
+                                                <div class="tabs">
+                                                    <a class="tab">
+                                                        <span>距離設定</span>
+                                                    </a>
+                                                    <a class="tab active">
+                                                        <span>地圖設定</span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="content"><span class="red">*</span> 距離</span></td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="0" min="0">
+                                                    <span class="content unit">公尺</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="content">至</span></td>
+                                            <td>
+                                                <div class="number">
+                                                    <input type="number" value="3000" min="0">
+                                                    <span class="content unit">公尺</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="content"><span class="red">*</span> 地圖名稱</span></td>
+                                            <td><input class="input" type="text" placeholder=""></td>
+                                            <td colspan="2" align="right"><a class="textButton"><span>清空地圖設定</span></a></td>
+                                        </tr>
+                                    </table>
+                                    <div class="map small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit"><span class="remark">新增</span></a>
                     </section>
                 </div>
             </section>

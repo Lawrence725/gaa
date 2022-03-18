@@ -118,11 +118,17 @@ body { margin: 0; background-color: #EBECF1; }
         "rule member"
         "rule number"
         "discount discount";
+        &.delivery { grid-template-columns: 40% 60%; grid-template-areas:
+            "setting distance"
+            "rule distance";
+            > div { background-color: white; }}
         > div { padding: 10px; border-radius: 5px; background-color: @c-bg; }
         .grid1 { grid-area: rule; }
         .grid2 { grid-area: member; }
         .grid3 { grid-area: number; }
         .grid4 { grid-area: discount; }
+        .grid5 { grid-area: setting; }
+        .grid6 { grid-area: distance; }
     }
     #container { width: 100%; display: flex; justify-content: space-between;
         // Menu
@@ -178,7 +184,7 @@ body { margin: 0; background-color: #EBECF1; }
         img { width: 100%; height: 100%; }}
     .input { width: calc(100% - 20px); height: 20px; padding: 5px 10px; margin: 5px 0; border-radius: 99px; font-size: 14px; background-color: @c-bg;
         &.fake { background-color: transparent; pointer-events: none; }}
-    .number { width: 100%; height: 30px; padding-left: 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
+    .number { width: calc(100% - 10px); height: 30px; padding-left: 10px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
         input { width: 100%; height: 100%; border-radius: 99px; font-size: 14px; text-align: left; color: black; background-color: transparent; }
         .unit { min-width: 45%; margin: 0; line-height: 30px; text-align: left; }
     }
@@ -188,7 +194,8 @@ body { margin: 0; background-color: #EBECF1; }
         .ql-snow { border: 0; }
         .ql-toolbar { border-bottom: 1px solid white; }
     }
-    .map { width: 100%; height: 150px; margin: 5px 0; border-radius: 10px; background-color: @c-bg; }
+    .map { width: 100%; height: 150px; margin: 5px 0; border-radius: 10px; background-color: @c-bg;
+        &.small { width: calc(100% - 5px); height: 100%; }}
     .dropdown { width: 100px; margin: 5px 0; position: relative; display: flex; align-items: center;
         &.full { width: 100%; }
         select { width: 100%; height: 20px; padding: 5px 10px; margin: 0; border-radius: 99px; font-size: 14px; color: black; background-color: @c-bg; }
@@ -225,10 +232,10 @@ body { margin: 0; background-color: #EBECF1; }
             &:hover { background-color: @c-g5; }
             i, span { color: @c-g2; }}
         .icon, span { color: white; }}
-    .tabs { width: 100%; height: 24px; padding: 3px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
+    .tabs { width: calc(100% - 6px); height: 24px; padding: 3px; margin: 5px 0; border-radius: 99px; display: flex; align-items: center; background-color: @c-bg;
         .tab { width: 100%; height: 100%; padding: 0 10px; border-radius: 99px; display: flex; align-items: center; justify-content: center;
             &.active { background-color: @c-1; color: white; box-shadow: unset; }
-            &:not(.active):hover { background-color: @c-2; }
+            &:not(.active):hover { background-color: @c-g5; }
             span { font-size: 12px; }
             .icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
         }
@@ -272,11 +279,11 @@ body { margin: 0; background-color: #EBECF1; }
             &:after { left: 3px; top: 0.5px; width: 3px; height: 6px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
         }
     }
-    table { max-width: 100%; border-collapse: unset; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 10px;
+    table { max-width: 100%; margin: 0 !important; border-collapse: unset; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 10px;
         &.fit { width: fit-content; }
-        &.empty { -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0;
+        &.empty { -webkit-border-horizontal-spacing: 10px; -webkit-border-vertical-spacing: 0;
             tr { background-color: transparent !important; }
-            td { padding: 0 10px 0 0; }
+            td { padding: 0; }
             span { line-height: normal !important; }
             .input { width: calc(100% - 20px); }}
         tr:not(:first-child) { background-color: @c-bg; }
@@ -301,6 +308,10 @@ body { margin: 0; background-color: #EBECF1; }
 
     // Popup
     .popup { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: none; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: hidden; z-index: 2; background-color: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
+        &.popDelivery .popBody { width: 800px; }
+        &.popCalculate .price { padding: 5px 10px; margin: 5px; border-radius: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: white;
+            &.result { background-color: @c-2;
+                span { color: @c-1; }}}
         &.popLogistics .img { width: 60px; height: auto; }
         &.popInvoice .popBody { width: 500px;
             .remark.red { margin: -5px 0 5px 5px; }}
@@ -328,7 +339,8 @@ body { margin: 0; background-color: #EBECF1; }
                 &::-webkit-scrollbar:vertical { width: 10px; }
                 &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @c-g5; border: 2.5px solid @c-bg; }}
             .popFooter { display: flex; }
-            input, .tabs, .dropdown > select, .number, .number > input { background-color: white !important; }}}
+            input, .tabs, .dropdown > select, .number, .number > input { background-color: white !important; }
+            .grid.delivery { input, .tabs, .dropdown > select, .number, .number > input { background-color: @c-bg !important; }}}}
 
     // Popup (Old)
     .modal { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: flex; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: auto; z-index: 3; background-color: rgba(0,0,0,0.5);

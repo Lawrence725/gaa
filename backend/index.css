@@ -345,6 +345,13 @@ body {
   row-gap: 10px;
   grid-template-areas: "rule member" "rule number" "discount discount";
 }
+#bodyOverview .grid.delivery {
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "setting distance" "rule distance";
+}
+#bodyOverview .grid.delivery > div {
+  background-color: white;
+}
 #bodyOverview .grid > div {
   padding: 10px;
   border-radius: 5px;
@@ -361,6 +368,12 @@ body {
 }
 #bodyOverview .grid .grid4 {
   grid-area: discount;
+}
+#bodyOverview .grid .grid5 {
+  grid-area: setting;
+}
+#bodyOverview .grid .grid6 {
+  grid-area: distance;
 }
 #bodyOverview #container {
   width: 100%;
@@ -542,7 +555,7 @@ body {
   pointer-events: none;
 }
 #bodyOverview .number {
-  width: 100%;
+  width: calc(100% - 10px);
   height: 30px;
   padding-left: 10px;
   margin: 5px 0;
@@ -600,6 +613,10 @@ body {
   margin: 5px 0;
   border-radius: 10px;
   background-color: #F5F6FA;
+}
+#bodyOverview .map.small {
+  width: calc(100% - 5px);
+  height: 100%;
 }
 #bodyOverview .dropdown {
   width: 100px;
@@ -783,7 +800,7 @@ body {
   color: white;
 }
 #bodyOverview .tabs {
-  width: 100%;
+  width: calc(100% - 6px);
   height: 24px;
   padding: 3px;
   margin: 5px 0;
@@ -807,7 +824,7 @@ body {
   box-shadow: unset;
 }
 #bodyOverview .tabs .tab:not(.active):hover {
-  background-color: #FEE0D6;
+  background-color: #E0E0E0;
 }
 #bodyOverview .tabs .tab span {
   font-size: 12px;
@@ -986,6 +1003,7 @@ body {
 }
 #bodyOverview table {
   max-width: 100%;
+  margin: 0 !important;
   border-collapse: unset;
   -webkit-border-horizontal-spacing: 0;
   -webkit-border-vertical-spacing: 10px;
@@ -994,14 +1012,14 @@ body {
   width: fit-content;
 }
 #bodyOverview table.empty {
-  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-horizontal-spacing: 10px;
   -webkit-border-vertical-spacing: 0;
 }
 #bodyOverview table.empty tr {
   background-color: transparent !important;
 }
 #bodyOverview table.empty td {
-  padding: 0 10px 0 0;
+  padding: 0;
 }
 #bodyOverview table.empty span {
   line-height: normal !important;
@@ -1087,6 +1105,25 @@ body {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
+}
+#bodyOverview .popup.popDelivery .popBody {
+  width: 800px;
+}
+#bodyOverview .popup.popCalculate .price {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+#bodyOverview .popup.popCalculate .price.result {
+  background-color: #FEE0D6;
+}
+#bodyOverview .popup.popCalculate .price.result span {
+  color: #F96332;
 }
 #bodyOverview .popup.popLogistics .img {
   width: 60px;
@@ -1219,6 +1256,13 @@ body {
 #bodyOverview .popup .popBody .number,
 #bodyOverview .popup .popBody .number > input {
   background-color: white !important;
+}
+#bodyOverview .popup .popBody .grid.delivery input,
+#bodyOverview .popup .popBody .grid.delivery .tabs,
+#bodyOverview .popup .popBody .grid.delivery .dropdown > select,
+#bodyOverview .popup .popBody .grid.delivery .number,
+#bodyOverview .popup .popBody .grid.delivery .number > input {
+  background-color: #F5F6FA !important;
 }
 #bodyOverview .modal {
   width: 100%;

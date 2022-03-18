@@ -1,3 +1,13 @@
+// Popup (Calculate)
+function popCalculate() {
+    var popCalculate    = document.getElementById("popCalculate");
+    var close           = popCalculate.getElementsByClassName("close")[0];
+    var submit          = popCalculate.getElementsByClassName("submit")[0];
+    close.onclick       = function() { popCalculate.style.display = "none"; }
+    // submit.onclick      = function() { popCalculate.style.display = "none"; }
+    window.onclick      = function(event) { if (event.target == popCalculate) { popCalculate.style.display = "none"; }}
+    popCalculate.style.display = "flex"; }
+
 // Popup (Logistics)
 function popLogistics() {
     var popLogistics    = document.getElementById("popLogistics");
@@ -9,6 +19,18 @@ function popLogistics() {
     cancel.onclick      = function() { popLogistics.style.display = "none"; }
     window.onclick      = function(event) { if (event.target == popLogistics) { popLogistics.style.display = "none"; }}
     popLogistics.style.display = "flex"; }
+
+// Popup (Delivery)
+function popDelivery() {
+    var popDelivery = document.getElementById("popDelivery");
+    var close       = popDelivery.getElementsByClassName("close")[0];
+    var submit      = popDelivery.getElementsByClassName("submit")[0];
+    var cancel      = popDelivery.getElementsByClassName("cancel")[0];
+    close.onclick   = function() { popDelivery.style.display = "none"; }
+    submit.onclick  = function() { popDelivery.style.display = "none"; }
+    cancel.onclick  = function() { popDelivery.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popDelivery) { popDelivery.style.display = "none"; }}
+    popDelivery.style.display = "flex"; }
 
 // Popup (Delete)
 function popDelete() {
