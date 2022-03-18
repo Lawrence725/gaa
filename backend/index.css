@@ -1394,26 +1394,6 @@ body {
 #bodyOverview .modal .price.result span {
   color: #F96332;
 }
-#bodyOverview .modal#popLogistics > .modal-content {
-  width: 300px;
-  padding: 20px;
-  margin: auto;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #F5F6FA;
-}
-#bodyOverview .modal#popCalculate > .modal-content {
-  width: 300px;
-  padding: 20px;
-  margin: auto;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #F5F6FA;
-}
 #bodyOverview .modal#popQRpay > .modal-content {
   width: 300px;
   padding: 20px;
@@ -1466,26 +1446,6 @@ body {
 }
 #bodyOverview .modal#popApp > .modal-content {
   width: 300px;
-  padding: 20px;
-  margin: auto;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #F5F6FA;
-}
-#bodyOverview .modal#popDelivery > .modal-content {
-  width: fit-content;
-  padding: 20px;
-  margin: auto;
-  border-radius: 5px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #F5F6FA;
-}
-#bodyOverview .modal#popDiscount > .modal-content {
-  width: 550px;
   padding: 20px;
   margin: auto;
   border-radius: 5px;
