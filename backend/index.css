@@ -1434,6 +1434,12 @@ body {
   flex-direction: column;
   background-color: #F5F6FA;
 }
+#bodyOverview .modal#popCup > .modal-content .button {
+  width: calc(100% - 30px);
+}
+#bodyOverview .modal#popCup > .modal-content .areaV {
+  width: calc(100% - 10px);
+}
 #bodyOverview .modal#popTTpush > .modal-content {
   width: 300px;
   padding: 20px;
