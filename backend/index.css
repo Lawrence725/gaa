@@ -617,6 +617,7 @@ body {
 #bodyOverview .map.small {
   width: calc(100% - 5px);
   height: 100%;
+  min-height: 300px;
 }
 #bodyOverview .dropdown {
   width: 100px;
@@ -1090,6 +1091,12 @@ body {
 }
 #bodyOverview table .edit .action > a {
   color: #F96332;
+}
+@media (min-width: 999px) {
+  #bodyOverview .popup {
+    width: calc(100% - 260px) !important;
+    margin-left: 260px;
+  }
 }
 #bodyOverview .popup {
   width: 100%;
