@@ -382,37 +382,37 @@ body {
 }
 #bodyOverview #container #tabs {
   min-width: 180px;
+  height: fit-content;
+  top: 20px;
+  position: sticky;
+  position: -webkit-sticky;
 }
 #bodyOverview #container #tabs .tab {
   width: calc(100% - 24px);
-  padding: 5px 10px;
-  margin-bottom: 15px;
-  border-radius: 30px;
+  padding: 10px;
+  border-left: 2px solid transparent;
+  border-radius: 0 20px 20px 0;
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
-#bodyOverview #container #tabs .tab:hover {
-  background-color: #BDBDBD;
+#bodyOverview #container #tabs .tab:hover .tabTitle {
+  color: black;
 }
 #bodyOverview #container #tabs .tab.active {
-  background-color: #F96332;
+  border-left: 2px solid #F96332;
+  background-color: white;
 }
 #bodyOverview #container #tabs .tab.active .tabTitle {
-  color: white;
+  color: #F96332;
 }
 #bodyOverview #container #tabs .tab.active .areaH .areaV {
-  color: white;
-}
-#bodyOverview #container #tabs .tab.active .error span,
-#bodyOverview #container #tabs .tab.active .error .icon {
-  color: white !important;
+  color: #F96332;
 }
 #bodyOverview #container #tabs .tab .tabTitle {
   display: flex;
   align-items: center;
   font-size: 18px;
-  color: black;
+  color: #4F4F4F;
 }
 #bodyOverview #container #tabs .tab .tabTitle .icon {
   width: 30px;

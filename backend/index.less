@@ -136,15 +136,15 @@ body { margin: 0; background-color: #EBECF1; }
     }
     #container { width: 100%; display: flex; justify-content: space-between;
         // Menu
-        #tabs { min-width: 180px;
-            .tab { width: calc(100% - 24px); padding: 5px 10px; margin-bottom: 15px; border-radius: 30px; display: flex; flex-direction: column; background-color: white;
-                &:hover { background-color: @c-g4; }
-                &.active { background-color: @c-1;
-                    .tabTitle { color: white; }
-                    .areaH .areaV { color: white; }
-                    .error span, .error .icon { color: white !important; }
+        #tabs { min-width: 180px; height: fit-content; top: 20px; position: sticky; position: -webkit-sticky;
+            .tab { width: calc(100% - 24px); padding: 10px; border-left: 2px solid transparent; border-radius: 0 20px 20px 0; display: flex; flex-direction: column;
+                &:hover {
+                    .tabTitle { color: black; }}
+                &.active { border-left: 2px solid @c-1; background-color: white;
+                    .tabTitle { color: @c-1; }
+                    .areaH .areaV { color: @c-1; }
                 }
-                .tabTitle { display: flex; align-items: center; font-size: 18px; color: black;
+                .tabTitle { display: flex; align-items: center; font-size: 18px; color: @c-g2;
                     .icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
                     .error { margin-left: auto;
                         span, .icon { color: @c-red; }}
