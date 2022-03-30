@@ -2340,7 +2340,7 @@
                                 <div class="box">
                                     <div class="item">
                                         <span class="title">電子發票</span>
-                                        <a class="setting main" onclick="popInvoice()"><i class="fas fa-cog"></i></a>
+                                        <a class="setting main" onclick="popInvoice1()"><i class="fas fa-cog"></i></a>
                                         <label class="switch">
                                             <input type="checkbox" checked>
                                             <span class="slider round"></span>
@@ -3105,11 +3105,35 @@
                 </div>
             </section>
             <!-- Popup (Invoice) -->
-            <section id="popInvoice" class="popInvoice popup">
+            <section id="popInvoice1" class="popInvoice popup">
                 <div class="popBody">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <section class="popHeader">
-                        <span class="title">電子發票申請</span>
+                        <span class="title">電子發票申請<br><span class="content primary">步驟1/3</span></span>
+                    </section>
+                    <section class="popMain">
+                        <table class="content empty">
+                            <tr>
+                                <td><span>特店ID<br></span>
+                                    <span class="remark silver">6碼，需與頭家網所申請一致</span></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="123456">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button submit"><span class="remark">下一步</span></a>
+                    </section>
+                </div>
+            </section>
+            <section id="popInvoice2" class="popInvoice popup">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">電子發票申請<br><span class="content primary">步驟2/3</span></span>
                     </section>
                     <section class="popMain">
                         <table class="content empty">
@@ -3123,37 +3147,66 @@
                             <tr>
                                 <td><span>特店發票抬頭<br></span>
                                     <span class="remark silver">建議最多8個中文字將印於紙本發票上方</span></td>
-                                <td><input class="input" type="text" placeholder="" value="SN"></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="SN">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
                             </tr>
                             <tr>
                                 <td><span>特店地址</span></td>
-                                <td><input class="input" type="text" placeholder="" value="台北市"></td>
-                            </tr>
-                            <tr>
-                                <td><span>特店ID<br></span>
-                                    <span class="remark silver">6碼，需與頭家網所申請一致</span></td>
-                                <td><input class="input" type="text" placeholder="" value="123456"></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="台北市">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
                             </tr>
                             <tr>
                                 <td><span>裝置ID<br></span>
                                     <span class="remark silver">需與頭家網所申請一致</span></td>
-                                <td><input class="input" type="text" placeholder="" value="123456"></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="123456">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
                             </tr>
                             <tr>
                                 <td><span>EDC ID<br></span>
                                     <span class="remark silver">需與頭家網所申請一致</span></td>
-                                <td><input class="input" type="text" placeholder="" value="123456"></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="123456">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
                             </tr>
                             <tr>
                                 <td><span>統一編號<br></span>
                                     <span class="remark silver">8碼數字，需與頭家網所申請一致</span></td>
-                                <td><input class="input" type="text" placeholder="" value="12345678"></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="12345678">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
                             </tr>
                             <tr>
                                 <td><span>使用者名稱<br></span>
                                     <span class="remark silver">登入頭家網後台之使用者名稱</span></td>
-                                <td><input class="input" type="text" placeholder="" value="shopname"></td>
+                                <td><div class="flexV">
+                                    <input class="input" type="text" placeholder="" value="shopname">
+                                    <!-- <span class="remark red">必填</span> -->
+                                </div></td>
                             </tr>
+                        </table>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white"><span class="remark">上一步</span></a>
+                        <a class="button submit"><span class="remark">下一步</span></a>
+                    </section>
+                </div>
+            </section>
+            <section id="popInvoice3" class="popInvoice popup">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="title">電子發票申請<br><span class="content primary">步驟3/3</span></span>
+                    </section>
+                    <section class="popMain">
+                        <table class="content empty">
                             <tr>
                                 <td><span>出單機序號</span></td>
                                 <td><input class="input" type="text" placeholder="" value="12345678"></td>
@@ -3165,7 +3218,7 @@
                         </table>
                     </section>
                     <section class="popFooter">
-                        <a class="button cancel white"><span class="remark">取消</span></a>
+                        <a class="button cancel white"><span class="remark">上一步</span></a>
                         <a class="button submit"><span class="remark">送出申請</span></a>
                     </section>
                 </div>

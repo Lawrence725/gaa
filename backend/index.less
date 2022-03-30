@@ -69,6 +69,7 @@ body { margin: 0; background-color: #EBECF1; }
 
 
     // Color
+    .primary    { color: @c-1 !important; }
     .silver     { color: @c-g3 !important; }
     .red        { color: @c-red !important; }
     .background { background-color: @c-bg !important; }
@@ -318,7 +319,9 @@ body { margin: 0; background-color: #EBECF1; }
             &.result { background-color: @c-2;
                 span { color: @c-1; }}}
         &.popLogistics .img { width: 60px; height: auto; }
-        &.popInvoice .popBody { width: 500px;
+        &.popInvoice .popBody { width: 500px; height: 500px;
+            .popMain { height: 100%; }
+            table td { width: 50% !important; }
             .remark.red { margin: -5px 0 5px 5px; }}
         &.popDiscount .popBody { width: 700px;
             .popMain:not(.full) { height: fit-content !important; overflow: initial; }

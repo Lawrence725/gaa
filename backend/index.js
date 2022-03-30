@@ -57,16 +57,36 @@ function popDiscount() {
     popDiscount.style.display = "flex"; }
     
 // Popup (Invoice)
-function popInvoice() {
-    var popInvoice  = document.getElementById("popInvoice");
-    var close       = popInvoice.getElementsByClassName("close")[0];
-    var submit      = popInvoice.getElementsByClassName("submit")[0];
-    var cancel      = popInvoice.getElementsByClassName("cancel")[0];
-    close.onclick   = function() { popInvoice.style.display = "none"; }
-    submit.onclick  = function() { popInvoice.style.display = "none"; }
-    cancel.onclick  = function() { popInvoice.style.display = "none"; }
-    window.onclick  = function(event) { if (event.target == popInvoice) { popInvoice.style.display = "none"; }}
-    popInvoice.style.display = "flex"; }
+function popInvoice1() {
+    var popInvoice1 = document.getElementById("popInvoice1");
+    var close       = popInvoice1.getElementsByClassName("close")[0];
+    var submit      = popInvoice1.getElementsByClassName("submit")[0];
+    var cancel      = popInvoice1.getElementsByClassName("cancel")[0];
+    close.onclick   = function() { popInvoice1.style.display = "none"; }
+    submit.onclick  = function() { popInvoice1.style.display = "none"; popInvoice2(); }
+    cancel.onclick  = function() { popInvoice1.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popInvoice1) { popInvoice1.style.display = "none"; }}
+    popInvoice1.style.display = "flex"; }
+function popInvoice2() {
+    var popInvoice2 = document.getElementById("popInvoice2");
+    var close       = popInvoice2.getElementsByClassName("close")[0];
+    var submit      = popInvoice2.getElementsByClassName("submit")[0];
+    var cancel      = popInvoice2.getElementsByClassName("cancel")[0];
+    close.onclick   = function() { popInvoice2.style.display = "none"; }
+    submit.onclick  = function() { popInvoice2.style.display = "none"; popInvoice3(); }
+    cancel.onclick  = function() { popInvoice2.style.display = "none"; popInvoice1(); }
+    window.onclick  = function(event) { if (event.target == popInvoice2) { popInvoice2.style.display = "none"; }}
+    popInvoice2.style.display = "flex"; }
+function popInvoice3() {
+    var popInvoice3 = document.getElementById("popInvoice3");
+    var close       = popInvoice3.getElementsByClassName("close")[0];
+    var submit      = popInvoice3.getElementsByClassName("submit")[0];
+    var cancel      = popInvoice3.getElementsByClassName("cancel")[0];
+    close.onclick   = function() { popInvoice3.style.display = "none"; }
+    submit.onclick  = function() { popInvoice3.style.display = "none"; }
+    cancel.onclick  = function() { popInvoice3.style.display = "none"; popInvoice2(); }
+    window.onclick  = function(event) { if (event.target == popInvoice3) { popInvoice3.style.display = "none"; }}
+    popInvoice3.style.display = "flex"; }
     
 // Popup (InvoiceDisable)
 function popInvoiceDisable() {

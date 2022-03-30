@@ -165,6 +165,9 @@ body {
   font-size: 14px;
   text-align: center;
 }
+#bodyOverview .primary {
+  color: #F96332 !important;
+}
 #bodyOverview .silver {
   color: #828282 !important;
 }
@@ -1138,6 +1141,13 @@ body {
 }
 #bodyOverview .popup.popInvoice .popBody {
   width: 500px;
+  height: 500px;
+}
+#bodyOverview .popup.popInvoice .popBody .popMain {
+  height: 100%;
+}
+#bodyOverview .popup.popInvoice .popBody table td {
+  width: 50% !important;
 }
 #bodyOverview .popup.popInvoice .popBody .remark.red {
   margin: -5px 0 5px 5px;
