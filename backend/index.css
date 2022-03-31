@@ -1274,6 +1274,9 @@ body {
 #bodyOverview .popup .popBody .number > input {
   background-color: white !important;
 }
+#bodyOverview .popup .popBody input.fake {
+  background-color: transparent !important;
+}
 #bodyOverview .popup .popBody .grid.delivery input,
 #bodyOverview .popup .popBody .grid.delivery .tabs,
 #bodyOverview .popup .popBody .grid.delivery .dropdown > select,
