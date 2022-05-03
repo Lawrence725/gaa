@@ -2,7 +2,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf) format('truetype');
+  src: url(http://fonts.gstatic.com/s/montserrat/v24/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf) format('truetype');
 }
 body {
   margin: 0;
@@ -621,6 +621,13 @@ body {
   width: calc(100% - 5px);
   height: 100%;
   min-height: 300px;
+  position: relative;
+}
+#bodyOverview .map.small .textButton {
+  margin: 0;
+  top: 10px;
+  left: 10px;
+  position: absolute;
 }
 #bodyOverview .dropdown {
   width: 100px;
@@ -1014,6 +1021,9 @@ body {
 }
 #bodyOverview table.fit {
   width: fit-content;
+}
+#bodyOverview table.width {
+  width: 100%;
 }
 #bodyOverview table.empty {
   -webkit-border-horizontal-spacing: 10px;
