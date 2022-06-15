@@ -661,6 +661,30 @@ body {
   color: #F96332;
   pointer-events: none;
 }
+#bodyOverview .inputDropdown {
+  width: 100%;
+  min-height: 30px;
+  box-sizing: border-box;
+  margin: 5px 0;
+  border-radius: 99px;
+  position: relative;
+  background-color: #F5F6FA;
+}
+#bodyOverview .inputDropdown input {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 99px;
+  box-sizing: border-box;
+  background-color: transparent !important;
+  font-size: 14px;
+}
+#bodyOverview .inputDropdown i {
+  top: 50%;
+  right: 12px;
+  position: absolute;
+  transform: translate(0, -50%);
+}
 #bodyOverview .date {
   width: fit-content;
   padding: 0 10px;
