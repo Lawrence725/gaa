@@ -2232,13 +2232,13 @@
                                 <div class="box">
                                     <span class="title">接單平台</span>
                                     <div class="item">
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/UberEats.png">
                                                 <span>Ubereats Pro</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="cover">
                                                 <span>未啟用</span>
                                             </div>
@@ -2247,7 +2247,7 @@
                                                 <span>Foodpanda Pro</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="cover">
                                                 <span>未啟用</span>
                                             </div>
@@ -2256,19 +2256,19 @@
                                                 <span>Ubereats Lite</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/Foodpanda.png">
                                                 <span>Foodpanda Lite</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/LineSpot.png">
                                                 <span>Line Spot</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/GoFoodie.png">
                                                 <span>GoFoodie</span>
@@ -2283,25 +2283,25 @@
                                 <div class="box">
                                     <span class="title">加值服務</span>
                                     <div class="item">
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/IDOO.png">
                                                 <span>IDOO</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/Cup.png">
                                                 <span>寄杯券服務串接</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/TTPUSH.png">
                                                 <span>TTPUSH台東金幣</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/APP.png">
                                                 <span>APP串接網址</span>
@@ -2316,16 +2316,22 @@
                                 <div class="box">
                                     <span class="title">POS串接</span>
                                     <div class="item">
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/LaFresh.png">
                                                 <span>益欣</span>
                                             </div>
                                         </a>
-                                        <a class="api">
+                                        <a class="api" onclick="popApi()">
                                             <div class="logo">
                                                 <img src="./img/GS.png">
                                                 <span>社守</span>
+                                            </div>
+                                        </a>
+                                        <a class="api" onclick="popApi()">
+                                            <div class="logo">
+                                                <img src="./img/Dudoo.png">
+                                                <span>肚肚</span>
                                             </div>
                                         </a>
                                     </div>
@@ -3286,6 +3292,70 @@
                     <section class="popFooter">
                         <a class="button cancel white"><span class="remark">取消</span></a>
                         <a class="button submit delete"><span class="remark">確定解除</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (API) -->
+            <section id="popApi" class="popApi popup" onclick="popClose(this)">
+                <div class="popBody">
+                    <a class="close" onclick="popClose(this)">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <section class="popHeader">
+                        <div class="item">
+                            <img class="titleImg" src="./img/UberEats.png">
+                            <span class="title">UberEats Pro</span>
+                        </div>
+                    </section>
+                    <section class="popMain">
+                        <table class="content empty width">
+                            <tr>
+                                <td><span class="content">啟用</span></td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="content">Ubereats UIUD</span></td>
+                                <td><input class="input" type="text" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <td><span class="content">串接Key設定</span></td>
+                                <td>
+                                    <label class="check">
+                                        <input type="checkbox" name="checkbox1"> <!-- checked="checked" -->
+                                        <span class="checkmark checkbox"></span>
+                                        <div class="text">使用預設帳號</div>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="content">Client ID</span></td>
+                                <td><input class="input" type="text" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="content">Client Secret</span><br>
+                                    <span class="remark">可勾選預設用點點帳號</span>
+                                </td>
+                                <td><input class="input" type="text" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <td><span class="content">樣板ID</span></td>
+                                <td><input class="input" type="text" placeholder=""></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel white" onclick="popClose(this)">
+                            <span class="remark">取消</span>
+                        </a>
+                        <a class="button submit" onclick="popClose(this)">
+                            <span class="remark">新增</span>
+                        </a>
                     </section>
                 </div>
             </section>

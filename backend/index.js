@@ -1,3 +1,16 @@
+// Popup close
+function popClose(e) {
+    if (e.classList.contains('popup'))
+        window.onclick  = function(event) {
+            if (event.target == e)
+                e.style.display = "none"; }
+    else if (!(e.classList.contains('popBody')))
+        e.closest('.popup').style.display = "none"; }
+
+// Popup (Api)
+function popApi() {
+    document.getElementById("popApi").style.display = "flex"; }
+    
 // Popup (Calculate)
 function popCalculate() {
     var popCalculate    = document.getElementById("popCalculate");

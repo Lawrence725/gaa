@@ -1318,6 +1318,14 @@ body {
 #bodyOverview .popup .popBody .grid.delivery .number > input {
   background-color: #F5F6FA !important;
 }
+#bodyOverview .popup .titleImg {
+  height: 50px;
+  margin-right: 10px;
+}
+#bodyOverview .popup .item {
+  display: flex;
+  align-items: center;
+}
 #bodyOverview .modal {
   width: 100%;
   height: 100%;
