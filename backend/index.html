@@ -27,7 +27,7 @@
                             <div class="icon"><i class="fas fa-store fa-sm"></i></div>
                             <span>商店</span>
                         </div>
-                        <!-- <div class="areaH">
+                        <div class="areaH">
                             <div class="areaV">
                                 <span>系統狀態</span>
                                 <span>取餐方式</span>
@@ -40,7 +40,7 @@
                                 <span>商店資料</span>
                                 <span>系統資料</span>
                             </div>
-                        </div> -->
+                        </div>
                     </a>
                     <!-- Tab -->
                     <a class="tab">
@@ -1580,7 +1580,7 @@
                         </div>
                         <div class="areaH">
                             <div class="areaV">
-                                <div class="box gray">
+                                <div class="box"> <!-- class="gray" -->
                                     <span class="title">預設物流業者</span>
                                     <div class="item">
                                         <label class="check box4">
@@ -1600,16 +1600,19 @@
                                                 <span>全球</span>
                                             </div>
                                             <a class="icon" onclick="popLogistics()"><i class="fas fa-cog"></i></a>
+                                            <div class="null">
+                                                <div>未開通</div>
+                                            </div>
                                         </label>
-                                        <label class="check box4">
-                                            <input type="radio" name="radio1"> <!-- checked="checked" -->
+                                        <!-- <label class="check box4">
+                                            <input type="radio" name="radio1"> checked="checked"
                                             <span class="checkmark radio"></span>
                                             <div class="logo">
                                                 <img src="./img/PandaGo.png">
                                                 <span>PandaGO</span>
                                             </div>
                                             <a class="icon" onclick="popLogistics()"><i class="fas fa-cog"></i></a>
-                                        </label>
+                                        </label> -->
                                         <label class="check box4">
                                             <input type="radio" name="radio1"> <!-- checked="checked" -->
                                             <span class="checkmark radio"></span>
@@ -2658,6 +2661,7 @@
                                             <option value="Lalamove">Lalamove</option>
                                             <option value="全球">全球</option>
                                             <option value="PandaGO">PandaGO</option>
+                                            <option value="Uber direct">Uber direct</option>
                                         </select>
                                         <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
                                     </div>
@@ -3025,6 +3029,16 @@
                                         <div class="text">不限</div>
                                     </label>
                                 </div>
+                                <div class="grid7">
+                                    <span class="title">折扣後小數點</span>
+                                    <div class="dropdown">
+                                        <select name="type">
+                                            <option value="無條件捨去">無條件捨去</option>
+                                            <option value="四捨五入">四捨五入</option>
+                                        </select>
+                                        <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                                    </div>
+                                </div>
                                 <div class="grid4">
                                     <span class="title">優惠方式</span>
                                     <table class="content fit empty">
@@ -3057,7 +3071,7 @@
                                                     <span class="content unit">%</span>
                                                 </div>
                                             </td>
-                                            <td>
+                                            <!-- <td>
                                                 <div class="dropdown">
                                                     <select name="type">
                                                         <option value="無條件捨去">無條件捨去</option>
@@ -3065,7 +3079,7 @@
                                                     </select>
                                                     <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 <span class="remark">例如：$50折10%<br>$50九折，即$45</span>
                                             </td>
